@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 820.35 485.86">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="-6.44" y1="242.93" x2="830.14" y2="242.93" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#d88979"/>
+      <stop offset=".3" stop-color="#a15343"/>
+      <stop offset=".37" stop-color="#ffebd8"/>
+      <stop offset="1" stop-color="#b56449"/>
+    </linearGradient>
+  </defs>
+  <g id="_圖層_3" data-name="圖層 3">
+    <path class="cls-1" d="M820.35,483.37c-82.41-8.72-117.51-66.73-157.87-133.54-63.66-105.35-142.88-236.46-440.9-249.5C88.03,94.49,35.62,49.91,2.97,0H0c32.95,51.02,85.59,96.86,221.46,102.8,296.7,12.98,375.54,143.46,438.89,248.3,40.77,67.46,76.2,126.04,159.99,134.76v-2.5Z"/>
+  </g>
+</svg>

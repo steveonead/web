@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <title>Document</title>
+    <style>
+      :root {
+        --main: #027484;
+        max-height: 100dvh;
+        width: 100%;
+        overflow-x: hidden;
+      }
+
+      .text-main {
+        color: var(--main);
+      }
+    </style>
+    <style type="text/tailwindcss">
+      .h2 {
+        @apply mb-4 text-3xl font-medium leading-relaxed;
+      }
+
+      .h3 {
+        @apply mb-2 text-xl font-medium;
+      }
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <main class="">
+      <section
+        class="relative min-h-dvh overflow-hidden bg-[url('./assets/bg-img.jpg')]"
+      >
+        <div
+          class="absolute left-1/2 top-1/2 flex w-full -translate-x-1/2 -translate-y-1/2 flex-col items-center"
+        >
+          <img
+            class="max-w-64 lg:max-w-80"
+            src="./assets/svg/logo-project.svg"
+            alt="logo"
+          />
+          <h2
+            class="h2 mt-12 flex w-full flex-col items-center justify-center gap-3 text-white lg:mt-16 lg:flex-row lg:gap-6"
+          >
+            <span class="-mr-6 tracking-[0.6em] lg:mr-0">西門雙星</span>
+            <span class="-mr-6 tracking-[0.6em]">靜巷藝邸</span>
+          </h2>
+          <h2 class="h2 w-full space-x-3 text-center text-white">
+            <span class="tracking-wider">35-50坪</span>
+            <span class="tracking-wider">2389-1888</span>
+          </h2>
+        </div>
+        <!-- <img
+          class="absolute bottom-0 left-0 translate-y-3/4"
+          src="./assets/svg/kv-float-lb-101.svg"
+          alt="deco line"
+        /> -->
+        <!-- <img
+          class="absolute bottom-0 left-0"
+          src="./assets/svg/kv-float-lb-102.svg"
+          alt="deco line"
+        /> -->
+      </section>
+      <section
+        class="flex min-h-dvh flex-col items-end bg-[url('./assets/s1-bg.jpg')] bg-center px-10 py-40 lg:p-48"
+      >
+        <img
+          class="mb-12 max-w-96 lg:max-w-[520px]"
+          src="./assets/svg/s1-text-en.svg"
+          alt="standing proudly in west taipei"
+        />
+        <h2 class="h2 text-end tracking-widest text-white">
+          揭序百年西區 <br />
+          世界之窗中的富隱名邸
+        </h2>
+      </section>
+      <section
+        class="relative flex flex-col gap-8 bg-[#D7D7D7] px-10 py-20 lg:grid lg:grid-cols-2 lg:gap-16 lg:p-40"
+      >
+        <img
+          class="col-span-1 max-lg:order-last"
+          src="./assets/s2-img.jpg"
+          alt="台北車站實景"
+        />
+        <div class="col-span-1">
+          <img
+            class="mb-10 max-w-60 lg:mb-12 lg:max-w-[320px]"
+            src="./assets/svg/s2-text-en.svg"
+            alt="brighten west district"
+          />
+          <h2 class="h2 text-main">
+            西區大未來 <br />
+            世界都在看
+          </h2>
+          <h3 class="h3">台北雙星千億開發 掀動西門增值潮</h3>
+          <p>
+            西區門戶計畫獨領上千億投資開發，打造台北國門大站「台北雙星」，遠超台北101近1.6倍的樓地板面積，六鐵共構車站、頂規商辦、國際百貨與高奢飯店齊發，定奪台灣下一次經濟奇蹟，為【瓏山林玥河】地段力全面鍍金。
+          </p>
+        </div>
+        <div
+          class="absolute -right-10 -top-20 size-52 rounded-full bg-[url('./assets/bg-img.jpg')] bg-cover bg-fixed bg-center max-lg:hidden"
+        ></div>
+      </section>
+      <section
+        class="relative flex min-h-dvh w-full flex-col overflow-hidden bg-[url('./assets/s3-bg.jpg')] bg-fixed bg-right-bottom bg-no-repeat px-12 lg:bg-[length:118%_100%] lg:bg-[0_0] lg:px-28"
+      >
+        <div
+          class="left-1/2 top-36 mt-20 flex w-full flex-col items-center lg:absolute lg:mt-0 lg:-translate-x-1/2 lg:-translate-y-1/2"
+        >
+          <img
+            class="max-w-44 lg:max-w-32"
+            src="./assets/svg/logo-project.svg"
+            alt="logo"
+          />
+        </div>
+        <div class="flex h-full grow flex-col justify-between pb-16 lg:pb-20">
+          <h2 class="h2 mt-24 tracking-widest text-white lg:mt-32">
+            西區門戶上升段 <br />
+            躍近西門雙捷運
+          </h2>
+          <div class="my-10 grow border-l border-white"></div>
+          <img
+            class="max-w-96"
+            src="./assets/svg/s3-text-en.svg"
+            alt="define the leadership vision"
+          />
+        </div>
+      </section>
+      <section class="relative flex flex-col px-6 py-16 lg:p-32">
+        <div
+          class="mb-10 flex flex-col gap-8 lg:flex-row lg:items-end lg:gap-40"
+        >
+          <img
+            class="order-4 max-w-[400px] lg:order-first"
+            src="./assets/svg/s4-text-en.svg"
+            alt="metro ximen station"
+          />
+          <div>
+            <h2 class="h2 text-main w-full tracking-widest">
+              捷運西門站 <br />
+              雙金軸核心
+            </h2>
+            <h3 class="h3">1站台北雙星，北捷人潮第2大站</h3>
+            <p>
+              板南×松山線交會「西門站」每日近8.4萬人潮進出站，長期穩居北捷前2大站，與台北車站共築北市最龐大交通樞紐！【瓏山林玥河】近鄰西門站，直達南軟與信義區，5站內集聚中山、忠孝新生、東區、三重站，稱霸軌道經濟學！
+            </p>
+          </div>
+        </div>
+        <div
+          class="aspect-[5/4] bg-[url('./assets/s5-img.jpg')] bg-cover bg-[50%_80%] lg:mt-4 lg:aspect-[5/2]"
+        ></div>
+        <div
+          class="absolute -left-8 bottom-10 size-64 rounded-full bg-[url('./assets/bg-img.jpg')] bg-cover bg-fixed bg-center max-lg:hidden"
+        ></div>
+      </section>
+      <!-- <section class="relative min-h-dvh overflow-hidden p-28">
+        <div class="grid grid-cols-2 gap-40">
+          <div class="col-span-1">
+            <h2 class="text-2xl w-full text-[#027484] tracking-widest leading-10">
+              速捷三動脈 <br />
+              決勝交通力
+            </h2>
+            <img class="max-w-[20vw]" src="./assets/svg/s5-text-en.svg" alt="logo" />
+            <h3>市民大道╳環河南北路╳中興大橋</h3>
+            <p>
+              【瓏山林玥河】向北直通「市民大道」，愜意橫跨北市東西向七大區；向西接軌「環河南北路」，中山高環北交流道、大稻埕河濱公園、西門町、板橋全線奔赴；「中興橋」來往三重開車往來便利，雙北來去自如。
+            </p>
+          </div>
+          <img class="col-span-1" src="./assets/中興橋.jpg" alt="" />
+        </div>
+      </section> -->
+      <!-- <section class="p-28 space-y-40">
+        <div class="grid grid-cols-4 gap-40">
+          <img class="col-span-1" src="./assets/商圈-西門町- (43).jpg" alt="" />
+          <div class="col-span-3 relative w-full">
+            <img class="max-w-[30vw]" src="./assets/svg/s6-text-en.svg" alt="POETIC LIVING STYLE" />
+            <h2 class="absolute top-0 left-[20vw] text-3xl text-[#027484]">經典的深蘊 西門心況味</h2>
+          </div>
+        </div>
+        <div class="grid grid-cols-4 gap-40">
+          <div class="col-span-1">
+            <h3>縱享西門町潮流 靜邀老西區人文</h3>
+            <p>
+              出門漫步在城西街道煙火氣息中，總能偶遇米其林多次欽點的在地美饌品牌；轉身即是武昌街、成都路的全球電影重鎮，西門町商圈新潮品味遊覽不盡。流行尖端交匯百年文化，住在西區正核心，繼續精彩一世紀。
+            </p>
+          </div>
+          <div class="col-span-3">
+            <img src="./assets/商圈-西門町-紅樓- (2).jpg" alt="" />
+          </div>
+        </div>
+      </section> -->
+      <!-- <section
+        class="relative min-h-dvh overflow-hidden p-28 bg-[url('./assets/外觀合成視覺.jpg')] bg-cover bg-center bg-no-repeat"
+      >
+        <img class="max-w-[30vw]" src="./assets/svg/s7-text-en.svg" alt="MANSION & MASTERPIECE" />
+        <h2 class="text-3xl text-white">新古典名宅 繁心一巷靜</h2>
+        <img class="max-w-[20vw]" src="./assets/2Z4A3524.jpg" alt="" />
+        <h3 class="text-white text-xl">西門特區靜巷名邸 雍雅大器落成</h3>
+        <p class="text-white">
+          最有底蘊的老西區，最有未來的新座標，【瓏山林玥河】藏城市繁華於靜，享隱巷慢活哲學，目光高層相望河岸，地標層峰奢侈寧靜。在輝映台北雙星首席的西區，難得頂級規格的靜巷大戶名宅，才是真傳世價值。
+        </p>
+      </section> -->
+      <!-- <section class="relative min-h-dvh overflow-hidden p-28 grid grid-cols-2 gap-40">
+        <img class="col-span-1" src="./assets/大直博物館-外觀2.jpg" alt="" />
+        <div class="col-span-1">
+          <h2>縱橫半世紀 巨擘級品牌</h2>
+          <img class="max-w-[30vw]" src="./assets/svg/s8-text-en.svg" alt="CONSTRUCTION BRAND" />
+          <h3>瓏山林營建 47年口碑叱吒全台</h3>
+          <p>
+            近50年的品牌底蘊，瓏山林營建以敏銳的選地眼界，一路鎖定台北精華土地，完美要求建築品質，構築生活最美好的樣貌。品牌版圖更跨足金融、飯店、媒體等巨擘，賦予【瓏山林玥河】如山般穩重厚實的藝術建築風景。
+          </p>
+          <div class="p-6 border">
+            <div>經典名作｜</div>
+            <div>瓏山林博物館、瓏山林世貿博物館、瓏山林榮馥大院、瓏山林台北中和飯店、瓏山林蘇澳冷熱泉度假飯店</div>
+          </div>
+        </div>
+      </section> -->
+      <!-- <section class="bg-[url('./assets/bg-img.jpg')] min-h-dvh overflow-hidden py-40 flex flex-col items-center">
+        <img class="max-w-[10vw]" src="./assets/svg/logo-project.svg" alt="logo" />
+        <h2 class="tracking-widest text-white">基本資料</h2>
+        <div class="text-white">
+          <div>投資興建|瓏山林企業股份有限公司</div>
+          <div>營建工程|瓏山林營建股份有限公司</div>
+          <div>建照號碼|109建字第0242號</div>
+          <div>使照號碼|113使字第0186號</div>
+          <div>基地面積|約467坪</div>
+          <div>建築樓高|地上13層、地下3層</div>
+          <div>規劃坪數|35-50坪</div>
+          <div>基地位置|台北市萬華區西昌街29巷8號</div>
+          <div>建築代銷|<img src="./assets/svg/logo.svg" alt="" />海心國際股份有限公司</div>
+          <div>接待會館|台北市萬華區西昌街29巷2號 02-2389-1888</div>
+        </div>
+        <form class="text-white">
+          <h3>立即預約</h3>
+          <input type="text" placeholder="請輸入姓名" />
+          <input type="tel" placeholder="請輸入電話" inputmode="tel" />
+          <input type="text" placeholder="請輸入驗證碼" />
+          <button type="button">獲取驗證碼</button>
+          <input type="email" placeholder="請輸入電子郵件" inputmode="email"/>
+          <select name="city" id="city-selector">
+            <option value="" selected disabled>縣市</option>
+          </select>
+          <select name="district" id="district-selector">
+            <option value="" selected disabled>鄉鎮市區</option>
+          </select>
+          <p>你所登錄的個人資料將作為以下用途（一）本網站所載之相關事宜通知（二）客戶管理與服務（三）本公司行銷業務之推廣本案實際內容以現場公告為準</p>
+          <input type="checkbox" name="agree" id="agree">
+          <label for="agree">本人已知悉以上個人資料蒐集聲明事項。隱私權聲明</label>
+          <button type="submit">送出表單</button>
+        </form>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.747553023251!2d121.49825807537681!3d25.042639877810764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a907bd882d53%3A0xa703718c44db0e30!2zMTA45Y-w5YyX5biC6JCs6I-v5Y2A6KW_5piM6KGXMjnlt7cy6Jmf!5e0!3m2!1szh-TW!2stw!4v1737011143413!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </section> -->
+    </main>
+  </body>
+</html>

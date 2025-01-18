@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 821.88 469.71">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="448.25" y1="184.7" x2="313.79" y2="365.45" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#d88979"/>
+      <stop offset=".3" stop-color="#a15343"/>
+      <stop offset=".37" stop-color="#ffebd8"/>
+      <stop offset="1" stop-color="#b56449"/>
+    </linearGradient>
+    <clipPath id="drawingMask">
+      <rect x="0" y="0" width="821.88" height="469.71">
+        <animate
+          attributeName="width"
+          from="0"
+          to="821.88"
+          dur="1.5s"
+          fill="freeze"
+        />
+      </rect>
+    </clipPath>
+  </defs>
+
+  <g id="_圖層_3" data-name="圖層 3">
+    <path
+      class="cls-1"
+      clip-path="url(#drawingMask)"
+      d="M240.54,235.34c40.24,125.69,170.53,137.22,308.48,149.43,56.4,4.99,114.73,10.16,168.76,23.29,44.71,10.87,77.49,30.54,102.63,61.65h1.48c-25.38-31.73-58.52-51.76-103.83-62.77-54.12-13.16-112.48-18.32-168.93-23.32-137.55-12.17-267.48-23.68-307.48-148.63-16.92-52.87-40.47-97.69-69.98-133.23-25.57-30.79-56.39-55.5-91.59-73.45C53.74,14.89,26.87,6,0,0v.79c87.63,19.73,189.27,74.4,240.54,234.55Z"
+    />
+  </g>
+</svg>
