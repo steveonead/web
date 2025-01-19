@@ -372,10 +372,12 @@
       <section
         class="relative flex flex-col gap-60 overflow-hidden px-6 py-16 lg:grid lg:grid-cols-2 lg:p-28"
       >
-        <div class="order-last flex items-start lg:order-first lg:col-span-1">
+        <div
+          class="order-last flex flex-wrap items-start lg:order-first lg:col-span-1"
+        >
           <div
             id="swiper-3"
-            class="swiper mt-12 flex aspect-[2/3] w-full items-start lg:mt-0"
+            class="swiper mt-12 flex aspect-[2/3] w-full grow items-start lg:mt-0"
           >
             <div class="swiper-wrapper">
               <div
@@ -429,6 +431,11 @@
               </svg>
             </button>
           </div>
+          <div
+            class="text-main mt-2 flex w-full items-center gap-4 text-lg font-medium after:grow after:border-b-2 after:border-[var(--main)] after:content-['']"
+          >
+            瓏山林博物館
+          </div>
         </div>
         <div class="col-span-1">
           <h2 class="text-main mb-6">縱橫半世紀 巨擘級品牌</h2>
@@ -441,49 +448,143 @@
           <p>
             近50年的品牌底蘊，瓏山林營建以敏銳的選地眼界，一路鎖定台北精華土地，完美要求建築品質，構築生活最美好的樣貌。品牌版圖更跨足金融、飯店、媒體等巨擘，賦予【瓏山林玥河】如山般穩重厚實的藝術建築風景。
           </p>
-          <div class="border border-black p-10">
+          <div class="relative border border-black p-10">
             <div>經典名作｜</div>
             <div>
               瓏山林博物館、瓏山林世貿博物館、瓏山林榮馥大院、瓏山林台北中和飯店、瓏山林蘇澳冷熱泉度假飯店
             </div>
+            <div
+              class="absolute -bottom-20 -right-40 z-[2] size-60 rounded-full bg-[url('./assets/bg-img.jpg')] bg-cover bg-fixed bg-center max-lg:hidden"
+            ></div>
           </div>
         </div>
       </section>
-      <!-- <section class="bg-[url('./assets/bg-img.jpg')] min-h-dvh overflow-hidden py-40 flex flex-col items-center">
-        <img class="max-w-[10vw]" src="./assets/svg/logo-project.svg" alt="logo" />
-        <h2 class="tracking-widest text-white">基本資料</h2>
-        <div class="text-white">
-          <div>投資興建|瓏山林企業股份有限公司</div>
-          <div>營建工程|瓏山林營建股份有限公司</div>
-          <div>建照號碼|109建字第0242號</div>
-          <div>使照號碼|113使字第0186號</div>
-          <div>基地面積|約467坪</div>
-          <div>建築樓高|地上13層、地下3層</div>
-          <div>規劃坪數|35-50坪</div>
-          <div>基地位置|台北市萬華區西昌街29巷8號</div>
-          <div>建築代銷|<img src="./assets/svg/logo.svg" alt="" />海心國際股份有限公司</div>
-          <div>接待會館|台北市萬華區西昌街29巷2號 02-2389-1888</div>
+      <section
+        class="flex min-h-dvh flex-col items-center overflow-hidden bg-[url('./assets/bg-img.jpg')] py-40"
+      >
+        <img
+          class="max-w-[10vw]"
+          src="./assets/svg/logo-project.svg"
+          alt="logo"
+        />
+        <h2
+          class="!mt-0 w-full text-center tracking-widest text-white before:mx-auto before:my-20 before:block before:w-2/3 before:border-t-2 before:border-white before:content-['']"
+        >
+          基本資料
+        </h2>
+        <div class="flex w-2/3 flex-wrap justify-center gap-6 px-12 text-white">
+          <div class="before:text-sm before:content-['投資興建']">
+            <span class="mx-0.5 text-sm">|</span>
+            瓏山林企業股份有限公司
+          </div>
+          <div class="before:text-sm before:content-['營建工程']">
+            <span class="mx-0.5 text-sm">|</span>
+            瓏山林營建股份有限公司
+          </div>
+          <div class="before:text-sm before:content-['建照號碼']">
+            <span class="mx-0.5 text-sm">|</span>
+            109建字第0242號
+          </div>
+          <div class="before:text-sm before:content-['使照號碼']">
+            <span class="mx-0.5 text-sm">|</span>
+            113使字第0186號
+          </div>
+          <div class="before:text-sm before:content-['基地面積']">
+            <span class="mx-0.5 text-sm">|</span>約467坪
+          </div>
+          <div class="before:text-sm before:content-['建築樓高']">
+            <span class="mx-0.5 text-sm">|</span>
+            地上13層、地下3層
+          </div>
+          <div class="before:text-sm before:content-['規劃坪數']">
+            <span class="mx-0.5 text-sm">|</span>35-50坪
+          </div>
+          <div class="before:text-sm before:content-['基地位置']">
+            <span class="mx-0.5 text-sm">|</span>
+            台北市萬華區西昌街29巷8號
+          </div>
+          <div
+            class="flex items-end before:text-sm before:content-['建築代銷']"
+          >
+            <span class="mx-0.5 text-sm">|</span>
+            <img
+              class="!my-0 w-6"
+              src="./assets/svg/logo.svg"
+              alt=""
+            />海心國際股份有限公司
+          </div>
+          <div class="before:text-sm before:content-['接待會館']">
+            <span class="mx-0.5 text-sm">|</span>
+            台北市萬華區西昌街29巷2號 02-2389-1888
+          </div>
         </div>
-        <form class="text-white">
-          <h3>立即預約</h3>
-          <input type="text" placeholder="請輸入姓名" />
-          <input type="tel" placeholder="請輸入電話" inputmode="tel" />
-          <input type="text" placeholder="請輸入驗證碼" />
-          <button type="button">獲取驗證碼</button>
-          <input type="email" placeholder="請輸入電子郵件" inputmode="email"/>
-          <select name="city" id="city-selector">
-            <option value="" selected disabled>縣市</option>
-          </select>
-          <select name="district" id="district-selector">
-            <option value="" selected disabled>鄉鎮市區</option>
-          </select>
-          <p>你所登錄的個人資料將作為以下用途（一）本網站所載之相關事宜通知（二）客戶管理與服務（三）本公司行銷業務之推廣本案實際內容以現場公告為準</p>
-          <input type="checkbox" name="agree" id="agree">
-          <label for="agree">本人已知悉以上個人資料蒐集聲明事項。隱私權聲明</label>
+        <form class="w-1/2 text-white">
+          <h3 class="!mb-12 text-center">立即預約</h3>
+          <div class="flex items-stretch">
+            <input
+              class="mr-6 grow rounded-md border-gray-300 bg-transparent px-4 py-3 placeholder:text-gray-200"
+              type="text"
+              placeholder="請輸入姓名"
+            />
+            <input
+              class="mr-6 grow rounded-md border-gray-300 bg-transparent px-4 py-3 placeholder:text-gray-200"
+              type="tel"
+              placeholder="請輸入電話"
+              inputmode="tel"
+            />
+            <input
+              class="mr-3 grow rounded-md border-gray-300 bg-transparent px-4 py-3 placeholder:text-gray-200"
+              type="text"
+              placeholder="請輸入驗證碼"
+            />
+            <button
+              type="button"
+              class="rounded-md bg-gray-300 px-3 text-[12px] text-gray-500"
+            >
+              獲取驗證碼
+            </button>
+          </div>
+          <div class="mt-10 flex items-stretch">
+            <input
+              class="mr-6 w-2/5 rounded-md border-gray-300 bg-transparent px-4 py-3 placeholder:text-gray-200"
+              type="email"
+              placeholder="請輸入電子郵件"
+              inputmode="email"
+            />
+            <select
+              name="city"
+              id="city-selector"
+              class="mr-6 grow rounded-md border-gray-300 bg-transparent px-4 py-3 text-gray-200"
+            >
+              <option value="" selected disabled>縣市</option>
+            </select>
+            <select
+              name="district"
+              id="district-selector"
+              class="grow rounded-md border-gray-300 bg-transparent px-4 py-3 text-gray-200"
+            >
+              <option value="" selected disabled>鄉鎮市區</option>
+            </select>
+          </div>
+          <p class="!mt-20 text-center text-sm text-gray-300">
+            你所登錄的個人資料將作為以下用途（一）本網站所載之相關事宜通知（二）客戶管理與服務（三）本公司行銷業務之推廣本案實際內容以現場公告為準
+          </p>
+          <input type="checkbox" name="agree" id="agree" />
+          <label for="agree"
+            >本人已知悉以上個人資料蒐集聲明事項。隱私權聲明</label
+          >
           <button type="submit">送出表單</button>
         </form>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.747553023251!2d121.49825807537681!3d25.042639877810764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a907bd882d53%3A0xa703718c44db0e30!2zMTA45Y-w5YyX5biC6JCs6I-v5Y2A6KW_5piM6KGXMjnlt7cy6Jmf!5e0!3m2!1szh-TW!2stw!4v1737011143413!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </section> -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.747553023251!2d121.49825807537681!3d25.042639877810764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a907bd882d53%3A0xa703718c44db0e30!2zMTA45Y-w5YyX5biC6JCs6I-v5Y2A6KW_5piM6KGXMjnlt7cy6Jmf!5e0!3m2!1szh-TW!2stw!4v1737011143413!5m2!1szh-TW!2stw"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
     </main>
   </body>
   <script>
