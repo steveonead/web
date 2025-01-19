@@ -3,18 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
     <style>
       :root {
         --main: #027484;
+        --font-sans: "Noto Sans TC", "FangSong", "NSimSun", "LiSong Pro Light",
+          "Apple LiSung Light", sans-serif;
+        --font-serif: "Noto Serif", "Georgia", "Times New Roman", "LiSu",
+          "PMingLiU", serif;
+        --font-CenturyGothic: "Century Gothic", "Noto Serif", "Roboto", "Lora",
+          sans-serif;
+
         max-height: 100dvh;
         width: 100%;
         overflow-x: hidden;
+        font-family: var(--font-sans);
       }
 
       .text-main {
         color: var(--main);
+      }
+
+      .border-main {
+        border-color: var(--main);
+      }
+
+      .bg-main {
+        background-color: var(--main);
       }
     </style>
     <style type="text/tailwindcss">
@@ -29,7 +61,7 @@
   </head>
   <body>
     <header></header>
-    <main class="">
+    <main class="!prose-xl">
       <section
         class="relative min-h-dvh overflow-hidden bg-[url('./assets/bg-img.jpg')]"
       >
@@ -155,68 +187,268 @@
           class="absolute -left-8 bottom-10 size-64 rounded-full bg-[url('./assets/bg-img.jpg')] bg-cover bg-fixed bg-center max-lg:hidden"
         ></div>
       </section>
-      <!-- <section class="relative min-h-dvh overflow-hidden p-28">
-        <div class="grid grid-cols-2 gap-40">
-          <div class="col-span-1">
-            <h2 class="text-2xl w-full text-[#027484] tracking-widest leading-10">
+      <section class="relative overflow-hidden px-6 py-16 lg:px-32 lg:py-10">
+        <div class="lg:grid lg:grid-cols-2 lg:gap-20">
+          <div class="max-lg:flex max-lg:flex-col lg:col-span-1">
+            <h2 class="h2 tracking-widest text-[#027484] lg:!mb-12">
               速捷三動脈 <br />
               決勝交通力
             </h2>
-            <img class="max-w-[20vw]" src="./assets/svg/s5-text-en.svg" alt="logo" />
-            <h3>市民大道╳環河南北路╳中興大橋</h3>
+            <img
+              class="max-w-[300px] max-lg:order-first max-lg:mb-8 lg:max-w-80"
+              src="./assets/svg/s5-text-en.svg"
+              alt="logo"
+            />
+            <h3 class="h3 mt-4 lg:mt-12">市民大道╳環河南北路╳中興大橋</h3>
             <p>
               【瓏山林玥河】向北直通「市民大道」，愜意橫跨北市東西向七大區；向西接軌「環河南北路」，中山高環北交流道、大稻埕河濱公園、西門町、板橋全線奔赴；「中興橋」來往三重開車往來便利，雙北來去自如。
             </p>
           </div>
-          <img class="col-span-1" src="./assets/中興橋.jpg" alt="" />
-        </div>
-      </section> -->
-      <!-- <section class="p-28 space-y-40">
-        <div class="grid grid-cols-4 gap-40">
-          <img class="col-span-1" src="./assets/商圈-西門町- (43).jpg" alt="" />
-          <div class="col-span-3 relative w-full">
-            <img class="max-w-[30vw]" src="./assets/svg/s6-text-en.svg" alt="POETIC LIVING STYLE" />
-            <h2 class="absolute top-0 left-[20vw] text-3xl text-[#027484]">經典的深蘊 西門心況味</h2>
+          <div class="col-span-1 max-lg:mt-12">
+            <div id="swiper-1" class="swiper aspect-[4/5] size-full">
+              <div class="text-main flex items-center gap-2 pb-2">
+                <button id="swiper-1-prev">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      d="M20 12H4m0 0l6-6m-6 6l6 6"
+                    />
+                  </svg>
+                </button>
+                <div class="border-main h-5 border-l-2"></div>
+                <button id="swiper-1-next">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      d="M4 12h16m0 0l-6-6m6 6l-6 6"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="swiper-wrapper">
+                <div
+                  class="swiper-slide relative size-full bg-[url('./assets/中興橋.jpg')] bg-cover bg-center bg-no-repeat"
+                ></div>
+                <div
+                  class="swiper-slide relative size-full bg-[url('./assets/交通-市民大道.jpg')] bg-cover bg-center bg-no-repeat"
+                ></div>
+                <div
+                  class="swiper-slide relative size-full bg-[url('./assets/交通-環河高架快速道路.jpg')] bg-cover bg-center bg-no-repeat"
+                ></div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="grid grid-cols-4 gap-40">
+      </section>
+      <section
+        class="relative space-y-10 px-6 lg:space-y-40 lg:px-28 lg:pb-28 lg:pt-16"
+      >
+        <div class="flex flex-col lg:grid lg:grid-cols-4 lg:gap-32">
+          <div
+            id="swiper-2"
+            class="swiper col-span-1 mt-12 aspect-square size-full lg:mt-0"
+          >
+            <div class="text-main flex items-center gap-2 pb-2">
+              <button id="swiper-2-prev">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M20 12H4m0 0l6-6m-6 6l6 6"
+                  />
+                </svg>
+              </button>
+              <div class="border-main h-5 border-l-2"></div>
+              <button id="swiper-2-next">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M4 12h16m0 0l-6-6m6 6l-6 6"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="swiper-wrapper">
+              <div
+                class="swiper-slide relative size-full bg-[url('./assets/商圈-西門町-彩虹.jpg')] bg-cover bg-center bg-no-repeat"
+              ></div>
+              <div
+                class="swiper-slide relative size-full bg-[url('./assets/商圈-西門町-HM.jpg')] bg-cover bg-center bg-no-repeat"
+              ></div>
+              <div
+                class="swiper-slide relative size-full bg-[url('./assets/商圈-西門町-萬年.jpg')] bg-cover bg-center bg-no-repeat"
+              ></div>
+              <div
+                class="swiper-slide relative size-full bg-[url('./assets/商圈-西門町-泡泡.jpg')] bg-cover bg-center bg-no-repeat"
+              ></div>
+            </div>
+          </div>
+          <div
+            class="relative order-first col-span-3 w-full border-t border-black pt-16 lg:order-2"
+          >
+            <img
+              class="max-w-[300px] max-lg:mb-8"
+              src="./assets/svg/s6-text-en.svg"
+              alt="POETIC LIVING STYLE"
+            />
+            <h2
+              class="h2 text-[#027484] max-lg:mb-0 lg:absolute lg:left-[16vw] lg:top-16"
+            >
+              經典的深蘊 西門心況味
+            </h2>
+          </div>
+        </div>
+        <div class="lg:grid lg:grid-cols-4 lg:gap-32">
           <div class="col-span-1">
-            <h3>縱享西門町潮流 靜邀老西區人文</h3>
+            <h3 class="h3">縱享西門町潮流 靜邀老西區人文</h3>
             <p>
               出門漫步在城西街道煙火氣息中，總能偶遇米其林多次欽點的在地美饌品牌；轉身即是武昌街、成都路的全球電影重鎮，西門町商圈新潮品味遊覽不盡。流行尖端交匯百年文化，住在西區正核心，繼續精彩一世紀。
             </p>
           </div>
-          <div class="col-span-3">
+          <div class="lg:col-span-3">
             <img src="./assets/商圈-西門町-紅樓- (2).jpg" alt="" />
           </div>
         </div>
-      </section> -->
-      <!-- <section
-        class="relative min-h-dvh overflow-hidden p-28 bg-[url('./assets/外觀合成視覺.jpg')] bg-cover bg-center bg-no-repeat"
+        <div
+          class="absolute -right-60 -top-80 z-[2] size-[35vw] rounded-full bg-[url('./assets/bg-img.jpg')] bg-cover bg-fixed bg-center max-lg:hidden"
+        ></div>
+      </section>
+      <section
+        class="relative min-h-dvh overflow-hidden bg-[url('./assets/外觀合成視覺.jpg')] bg-cover bg-center bg-no-repeat px-6 py-16 lg:px-60 lg:py-28"
       >
-        <img class="max-w-[30vw]" src="./assets/svg/s7-text-en.svg" alt="MANSION & MASTERPIECE" />
-        <h2 class="text-3xl text-white">新古典名宅 繁心一巷靜</h2>
-        <img class="max-w-[20vw]" src="./assets/2Z4A3524.jpg" alt="" />
-        <h3 class="text-white text-xl">西門特區靜巷名邸 雍雅大器落成</h3>
-        <p class="text-white">
-          最有底蘊的老西區，最有未來的新座標，【瓏山林玥河】藏城市繁華於靜，享隱巷慢活哲學，目光高層相望河岸，地標層峰奢侈寧靜。在輝映台北雙星首席的西區，難得頂級規格的靜巷大戶名宅，才是真傳世價值。
-        </p>
-      </section> -->
-      <!-- <section class="relative min-h-dvh overflow-hidden p-28 grid grid-cols-2 gap-40">
-        <img class="col-span-1" src="./assets/大直博物館-外觀2.jpg" alt="" />
+        <div class="lg:max-w-[40%]">
+          <img
+            class="max-w-lg"
+            src="./assets/svg/s7-text-en.svg"
+            alt="MANSION & MASTERPIECE"
+          />
+          <h2 class="h2 !my-12 text-white">新古典名宅 繁心一巷靜</h2>
+          <img
+            class="mb-12 lg:max-w-[20vw]"
+            src="./assets/2Z4A3524.jpg"
+            alt=""
+          />
+          <h3 class="h3 text-white">西門特區靜巷名邸 雍雅大器落成</h3>
+          <p class="text-white">
+            最有底蘊的老西區，最有未來的新座標，【瓏山林玥河】藏城市繁華於靜，享隱巷慢活哲學，目光高層相望河岸，地標層峰奢侈寧靜。在輝映台北雙星首席的西區，難得頂級規格的靜巷大戶名宅，才是真傳世價值。
+          </p>
+        </div>
+      </section>
+      <section
+        class="relative flex flex-col gap-60 overflow-hidden px-6 py-16 lg:grid lg:grid-cols-2 lg:p-28"
+      >
+        <div class="order-last flex items-start lg:order-first lg:col-span-1">
+          <div
+            id="swiper-3"
+            class="swiper mt-12 flex aspect-[2/3] w-full items-start lg:mt-0"
+          >
+            <div class="swiper-wrapper">
+              <div
+                class="swiper-slide relative size-full bg-[url('./assets/商圈-西門町-彩虹.jpg')] bg-cover bg-center bg-no-repeat"
+              ></div>
+              <div
+                class="swiper-slide relative size-full bg-[url('./assets/商圈-西門町-HM.jpg')] bg-cover bg-center bg-no-repeat"
+              ></div>
+              <div
+                class="swiper-slide relative size-full bg-[url('./assets/商圈-西門町-萬年.jpg')] bg-cover bg-center bg-no-repeat"
+              ></div>
+              <div
+                class="swiper-slide relative size-full bg-[url('./assets/商圈-西門町-泡泡.jpg')] bg-cover bg-center bg-no-repeat"
+              ></div>
+            </div>
+          </div>
+          <div class="text-main ml-2 flex items-center gap-2 pb-2">
+            <button id="swiper-3-prev">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M20 12H4m0 0l6-6m-6 6l6 6"
+                />
+              </svg>
+            </button>
+            <div class="border-main h-5 border-l-2"></div>
+            <button id="swiper-3-next">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M4 12h16m0 0l-6-6m6 6l-6 6"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
         <div class="col-span-1">
-          <h2>縱橫半世紀 巨擘級品牌</h2>
-          <img class="max-w-[30vw]" src="./assets/svg/s8-text-en.svg" alt="CONSTRUCTION BRAND" />
+          <h2 class="text-main mb-6">縱橫半世紀 巨擘級品牌</h2>
+          <img
+            class="max-w-xl"
+            src="./assets/svg/s8-text-en.svg"
+            alt="CONSTRUCTION BRAND"
+          />
           <h3>瓏山林營建 47年口碑叱吒全台</h3>
           <p>
             近50年的品牌底蘊，瓏山林營建以敏銳的選地眼界，一路鎖定台北精華土地，完美要求建築品質，構築生活最美好的樣貌。品牌版圖更跨足金融、飯店、媒體等巨擘，賦予【瓏山林玥河】如山般穩重厚實的藝術建築風景。
           </p>
-          <div class="p-6 border">
+          <div class="border border-black p-10">
             <div>經典名作｜</div>
-            <div>瓏山林博物館、瓏山林世貿博物館、瓏山林榮馥大院、瓏山林台北中和飯店、瓏山林蘇澳冷熱泉度假飯店</div>
+            <div>
+              瓏山林博物館、瓏山林世貿博物館、瓏山林榮馥大院、瓏山林台北中和飯店、瓏山林蘇澳冷熱泉度假飯店
+            </div>
           </div>
         </div>
-      </section> -->
+      </section>
       <!-- <section class="bg-[url('./assets/bg-img.jpg')] min-h-dvh overflow-hidden py-40 flex flex-col items-center">
         <img class="max-w-[10vw]" src="./assets/svg/logo-project.svg" alt="logo" />
         <h2 class="tracking-widest text-white">基本資料</h2>
@@ -254,4 +486,31 @@
       </section> -->
     </main>
   </body>
+  <script>
+    $(document).ready(() => {
+      const swiper1 = new Swiper("#swiper-1", {
+        loop: true,
+      });
+
+      $("#swiper-1-prev").click(() => {
+        swiper1.slidePrev();
+      });
+
+      $("#swiper-1-next").click(() => {
+        swiper1.slideNext();
+      });
+
+      const swiper2 = new Swiper("#swiper-2", {
+        loop: true,
+      });
+
+      $("#swiper-2-prev").click(() => {
+        swiper2.slidePrev();
+      });
+
+      $("#swiper-2-next").click(() => {
+        swiper2.slideNext();
+      });
+    });
+  </script>
 </html>
