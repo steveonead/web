@@ -131,14 +131,24 @@
 
       .slide-before-1 {
         opacity: 0.8;
-        transform: scale(80%) translateX(-45%);
+        transform: scale(70%) translateX(-45%);
         z-index: 2;
       }
 
       .slide-before-2 {
         opacity: 0.5;
-        transform: scale(60%) translateX(-100%);
+        transform: scale(50%) translateX(-100%);
         z-index: 1;
+      }
+
+      @media (min-width: 1536px) {
+        .slide-before-1 {
+          transform: scale(80%) translateX(-45%);
+        }
+
+        .slide-before-2 {
+          transform: scale(60%) translateX(-100%);
+        }
       }
     </style>
   </head>
@@ -148,7 +158,8 @@
     </header>
     <main>
       <section
-        class="prose-lg relative min-h-dvh bg-[url('./assets/bg-img.jpg')] bg-cover bg-fixed bg-center bg-no-repeat"
+        id="section-1"
+        class="prose-lg relative min-h-dvh bg-[url('./assets/bg-img.webp')] bg-cover bg-fixed bg-center bg-no-repeat"
       >
         <div
           class="absolute left-1/2 top-1/2 flex w-full -translate-x-1/2 -translate-y-1/2 flex-col items-center"
@@ -204,11 +215,13 @@
       </section>
 
       <section
-        class="min-h-[120dvh] bg-[url('./assets/s1-bg.jpg')] bg-cover bg-bottom bg-no-repeat px-6 py-16 lg:min-h-dvh lg:p-20"
+        id="section-2"
+        class="min-h-[120dvh] bg-[url('./assets/s1-bg.webp')] bg-cover bg-bottom bg-no-repeat px-6 py-16 lg:min-h-dvh lg:p-20"
       >
         <div
           data-aos="fade-up"
           data-aos-delay="200"
+          data-aos-anchor="#section-2"
           class="prose-lg flex flex-col items-end"
         >
           <img
@@ -223,9 +236,10 @@
         </div>
       </section>
 
-      <section class="relative bg-[#DCDCDC]">
+      <section id="section-3" class="relative bg-[#DCDCDC]">
         <div
           data-aos="fade-right"
+          data-aos-anchor="#section-3"
           class="grid gap-y-8 px-6 py-16 lg:grid-cols-2 lg:gap-16 lg:px-32 lg:py-40"
         >
           <div class="col-span-1 flex flex-col">
@@ -250,20 +264,21 @@
           </div>
           <img
             class="col-span-1 aspect-square object-cover lg:order-first lg:!mb-0"
-            src="./assets/s2-img.jpg"
+            src="./assets/s2-img.webp"
             alt="台北車站實景"
           />
         </div>
         <div
           data-aos="fade-left"
-          class="absolute -right-10 -top-20 size-60 rounded-full bg-[url('./assets/bg-img.jpg')] bg-cover bg-fixed bg-center max-lg:hidden"
+          data-aos-anchor="#section-3"
+          class="absolute -right-10 -top-20 size-60 rounded-full bg-[url('./assets/bg-img.webp')] bg-cover bg-center max-lg:hidden"
         ></div>
       </section>
 
-      <section class="relative flex max-lg:overflow-x-auto">
-        <div class="relative z-10 flex flex-col justify-between">
+      <section id="section-4" class="relative flex max-lg:overflow-x-auto">
+        <div class="relative z-10 flex grow flex-col justify-between">
           <img
-            src="./assets/s3-bg.jpg"
+            src="./assets/s3-bg.webp"
             alt=""
             class="object-cover max-lg:min-w-[1663px]"
           />
@@ -305,7 +320,9 @@
       </section>
 
       <section
+        id="section-5"
         data-aos="fade-left"
+        data-aos-anchor="#section-5"
         class="relative flex flex-col px-6 py-16 lg:p-32"
       >
         <div
@@ -328,16 +345,19 @@
           </div>
         </div>
         <div
-          class="aspect-[5/4] bg-[url('./assets/s5-img.jpg')] bg-cover bg-[50%_80%] lg:mt-4 lg:aspect-[5/2]"
+          class="aspect-[5/4] bg-[url('./assets/s5-img.webp')] bg-cover bg-[50%_80%] lg:mt-4 lg:aspect-[5/2]"
         ></div>
         <div
           data-aos="fade-right"
-          class="absolute -left-16 bottom-10 size-72 rounded-full bg-[url('./assets/bg-img.jpg')] bg-cover bg-fixed bg-center max-lg:hidden"
+          data-aos-anchor="#section-5"
+          class="absolute -left-16 bottom-10 size-72 rounded-full bg-[url('./assets/bg-img.webp')] bg-cover bg-center max-lg:hidden"
         ></div>
       </section>
 
       <section
+        id="section-6"
         data-aos="fade-right"
+        data-aos-anchor="#section-6"
         class="relative overflow-hidden px-6 pb-12 lg:px-32 lg:py-10"
       >
         <div class="lg:grid lg:grid-cols-2 lg:gap-20">
@@ -398,21 +418,21 @@
               <div class="swiper-wrapper aspect-square lg:aspect-[8/9]">
                 <div class="swiper-slide relative">
                   <img
-                    src="./assets/zhongxing-bridge.jpg"
+                    src="./assets/zhongxing-bridge.webp"
                     alt="中興橋"
                     class="absolute inset-0 size-full object-cover"
                   />
                 </div>
                 <div class="swiper-slide relative">
                   <img
-                    src="./assets/civic-blvd.jpg"
+                    src="./assets/civic-blvd.webp"
                     alt="市民大道"
                     class="absolute inset-0 size-full object-cover"
                   />
                 </div>
                 <div class="swiper-slide relative">
                   <img
-                    src="./assets/expressway.jpg"
+                    src="./assets/expressway.webp"
                     alt="環河高架快速道路"
                     class="absolute inset-0 size-full object-cover"
                   />
@@ -424,37 +444,39 @@
       </section>
 
       <section
+        id="section-7"
         data-aos="fade-left"
-        class="relative grid grid-cols-1 px-6 pb-16 lg:grid-cols-8 lg:gap-x-6 lg:gap-y-28 lg:px-32 lg:py-16"
+        data-aos-anchor="#section-7"
+        class="relative grid grid-cols-1 px-6 pb-16 lg:grid-cols-8 lg:gap-x-6 lg:gap-y-28 lg:px-32 lg:pb-24 lg:pt-16"
       >
         <div class="lg:col-span-3 lg:pr-10">
           <div id="swiper-2" class="swiper">
             <div class="swiper-wrapper aspect-square">
               <div class="swiper-slide relative">
                 <img
-                  src="./assets/商圈-西門町-彩虹.jpg"
-                  alt="商圈-西門町-彩虹"
+                  src="./assets/rainbow.webp"
+                  alt="西門町 彩虹走道"
                   class="absolute inset-0 size-full object-cover"
                 />
               </div>
               <div class="swiper-slide relative">
                 <img
-                  src="./assets/商圈-西門町-HM.jpg"
-                  alt="商圈-西門町-HM"
+                  src="./assets/h-and-m.webp"
+                  alt="西門町 H&M"
                   class="absolute inset-0 size-full object-cover"
                 />
               </div>
               <div class="swiper-slide relative">
                 <img
-                  src="./assets/商圈-西門町-萬年.jpg"
-                  alt="商圈-西門町-萬年"
+                  src="./assets/wan-nian-building.webp"
+                  alt="西門町 萬年大樓"
                   class="absolute inset-0 size-full object-cover"
                 />
               </div>
               <div class="swiper-slide relative">
                 <img
-                  src="./assets/商圈-西門町-泡泡.jpg"
-                  alt="商圈-西門町-泡泡"
+                  src="./assets/pop-mart.webp"
+                  alt="西門町 泡泡瑪特"
                   class="absolute inset-0 size-full object-cover"
                 />
               </div>
@@ -520,20 +542,25 @@
         </div>
         <div class="max-lg:mt-6 lg:col-span-5 lg:mb-0 lg:pl-6">
           <img
-            src="./assets/red-house.jpg"
+            src="./assets/red-house.webp"
             alt="西門町 紅樓"
             class="aspect-square object-cover lg:aspect-[7/3]"
           />
         </div>
         <div
-          class="absolute -right-60 -top-72 z-[2] size-[35vw] rounded-full bg-[url('./assets/bg-img.jpg')] bg-cover bg-fixed bg-center max-lg:hidden"
+          class="absolute -right-60 -top-72 z-[2] size-[35vw] rounded-full bg-[url('./assets/bg-img.webp')] bg-cover bg-center max-lg:hidden"
         ></div>
       </section>
 
       <section
-        class="relative min-h-dvh overflow-hidden bg-[url('./assets/building-bg.jpg')] bg-cover bg-center bg-no-repeat px-6 py-16 lg:px-60 lg:pt-20"
+        id="section-8"
+        class="relative min-h-dvh overflow-hidden bg-[url('./assets/building-bg.webp')] bg-cover bg-center bg-no-repeat px-6 py-16 lg:px-60 lg:pt-20"
       >
-        <div data-aos="fade-up" class="prose-lg lg:max-w-[50%]">
+        <div
+          data-aos="fade-up"
+          data-aos-anchor="#section-8"
+          class="prose-lg lg:max-w-[50%]"
+        >
           <img
             class="lg:max-w-[280px]"
             src="./assets/svg/s7-text-en.svg"
@@ -542,7 +569,7 @@
           <h2 class="my-12 text-white">新古典名宅 繁心一巷靜</h2>
           <img
             class="mb-12 aspect-[5/3] object-cover lg:max-w-[360px]"
-            src="./assets/building-look-up.jpg"
+            src="./assets/building-look-up.webp"
             alt="仰看圖"
           />
           <h3 class="text-white">西門特區靜巷名邸 雍雅大器落成</h3>
@@ -553,40 +580,61 @@
       </section>
 
       <section
+        id="section-9"
         data-aos="fade-right"
-        class="relative flex flex-col overflow-hidden px-6 py-16 lg:grid lg:grid-cols-2 lg:justify-stretch lg:gap-x-36 lg:px-28 lg:py-40"
+        data-aos-anchor="#section-9"
+        class="relative flex flex-col overflow-hidden px-6 py-16 lg:grid lg:grid-cols-2 lg:justify-stretch lg:px-32 lg:py-40 xl:gap-x-24 2xl:gap-x-48 2xl:px-40"
       >
-        <div class="flex w-full items-start lg:col-span-1">
-          <div class="size-full grow">
-            <div class="relative ml-10 flex h-full items-center">
+        <div class="flex w-full items-start max-lg:flex-wrap lg:col-span-1">
+          <div class="size-full grow 2xl:ml-32">
+            <div
+              class="relative flex h-full items-center max-lg:aspect-square 2xl:aspect-[6/7]"
+            >
               <img
-                src="./assets/rainbow.jpg"
-                alt="西門町 彩虹走道"
-                class="slide slide-before-2 h-full object-cover max-lg:aspect-square"
-              />
-              <img
-                src="./assets/h-and-m.jpg"
-                alt="西門町 H&M"
-                class="slide slide-before-1 h-full object-cover max-lg:aspect-square"
-              />
-              <img
-                src="./assets/wan-nian-building.jpg"
+                src="./assets/1-word-trade.webp"
                 alt="西門町 萬年大樓"
-                class="slide slide-in-view h-full object-cover max-lg:aspect-square"
+                class="slide slide slide-before-1 size-full object-cover"
               />
               <img
-                src="./assets/pop-mart.jpg"
+                src="./assets/2-dazi-museum.webp"
+                alt="西門町 H&M"
+                class="slide slide-before-2 size-full object-cover"
+              />
+              <img
+                src="./assets/3-dazi-museum.webp"
+                alt="瓏山林博物館"
+                class="slide slide-in-view size-full object-cover"
+              />
+              <img
+                src="./assets/4-word-trade-museum.webp"
                 alt="西門町 泡泡瑪特"
-                class="slide h-full object-cover max-lg:aspect-square"
+                class="slide size-full object-cover"
+              />
+              <img
+                src="./assets/5-gallery.webp"
+                alt="西門町 泡泡瑪特"
+                class="slide size-full object-cover"
+              />
+              <img
+                src="./assets/6-main.webp"
+                alt="西門町 泡泡瑪特"
+                class="slide size-full object-cover"
+              />
+              <img
+                src="./assets/7-look-up.webp"
+                alt="西門町 泡泡瑪特"
+                class="slide size-full object-cover"
               />
             </div>
             <div
-              class="text-main mt-2 flex w-full items-center gap-4 text-lg font-medium after:grow after:border-b-2 after:border-[var(--main)] after:content-['']"
+              class="photo-text text-main mt-6 flex w-full items-center gap-4 text-xl font-medium before:grow before:border-b-2 before:border-[var(--main)] before:content-[''] after:grow after:border-b-2 after:border-[var(--main)] after:content-[''] lg:mt-3 lg:text-lg lg:before:hidden"
             >
               瓏山林博物館
             </div>
           </div>
-          <div class="text-main flex items-center gap-2 lg:ml-6 lg:mt-6">
+          <div
+            class="text-main mb-4 flex items-center gap-2 max-lg:order-first lg:ml-6 lg:mt-6"
+          >
             <button id="swiper-3-prev">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -643,15 +691,17 @@
               瓏山林博物館、瓏山林世貿博物館、瓏山林榮馥大院、瓏山林台北中和飯店、瓏山林蘇澳冷熱泉度假飯店
             </p>
             <div
-              class="absolute -bottom-20 right-[-35%] z-[2] size-48 rounded-full bg-[url('./assets/bg-img.jpg')] bg-cover bg-fixed bg-center max-lg:hidden"
+              class="absolute -bottom-20 right-[-30%] z-[2] size-48 rounded-full bg-[url('./assets/bg-img.webp')] bg-cover bg-center max-lg:hidden"
             ></div>
           </div>
         </div>
       </section>
 
       <section
+        id="section-10"
         data-aos="fade-up"
-        class="prose-lg bg-[url('./assets/bg-img.jpg')] bg-cover bg-no-repeat py-24 lg:py-40"
+        data-aos-anchor="#section-10"
+        class="prose-lg flex flex-col items-center bg-[url('./assets/bg-img.webp')] bg-cover bg-no-repeat py-24 lg:pb-32 lg:pt-40"
       >
         <div class="flex flex-col items-center">
           <img
@@ -665,10 +715,10 @@
             基本資料
           </h2>
           <div
-            class="gap-x-6 text-white lg:flex lg:w-[75%] lg:flex-wrap lg:justify-center"
+            class="flex flex-wrap items-center justify-center gap-x-6 text-white lg:w-[75%]"
           >
             <p
-              class="text-center text-[16px] before:text-[12px] before:content-['投資興建'] max-lg:mt-0"
+              class="text-center text-[16px] before:text-[12px] before:content-['投資興建']"
             >
               <span class="mx-0.5">|</span>
               瓏山林企業股份有限公司
@@ -731,93 +781,92 @@
               >
             </p>
           </div>
-          <form class="w-5/8 flex flex-col px-10 text-white">
-            <h2 class="text-center">立即預約</h2>
-            <div
-              class="flex w-full max-lg:flex-col max-lg:gap-y-4 lg:items-stretch"
-            >
-              <input
-                class="grow rounded-md border-gray-300 bg-transparent px-4 py-3 placeholder:text-gray-200 lg:mr-6"
-                type="text"
-                placeholder="請輸入姓名"
-              />
-              <input
-                class="grow rounded-md border-gray-300 bg-transparent px-4 py-3 placeholder:text-gray-200 lg:mr-6"
-                type="tel"
-                placeholder="請輸入電話"
-                inputmode="tel"
-              />
-              <input
-                class="grow rounded-md border-gray-300 bg-transparent px-4 py-3 placeholder:text-gray-200 lg:mr-3"
-                type="text"
-                placeholder="請輸入驗證碼"
-              />
-              <button
-                type="button"
-                class="rounded-md bg-gray-300 text-[12px] text-gray-600 max-lg:py-3 lg:mx-auto lg:px-3"
-              >
-                獲取驗證碼
-              </button>
-            </div>
-            <div
-              class="mt-10 flex items-stretch max-lg:flex-col max-lg:gap-y-4"
-            >
-              <input
-                class="rounded-md border-gray-300 bg-transparent px-4 py-3 placeholder:text-gray-200 lg:mr-6 lg:w-2/5"
-                type="email"
-                placeholder="請輸入電子郵件"
-                inputmode="email"
-              />
-              <select
-                name="city"
-                id="city-selector"
-                class="grow rounded-md border-gray-300 bg-transparent px-4 py-3 text-gray-200 lg:mr-6"
-              >
-                <option value="" selected disabled>縣市</option>
-              </select>
-              <select
-                name="district"
-                id="district-selector"
-                class="grow rounded-md border-gray-300 bg-transparent px-4 py-3 text-gray-200"
-              >
-                <option value="" selected disabled>鄉鎮市區</option>
-              </select>
-            </div>
-            <p class="mt-10 text-center !text-[14px] text-gray-300 lg:mt-16">
-              你所登錄的個人資料將作為以下用途（一）本網站所載之相關事宜通知（二）客戶管理與服務（三）本公司行銷業務之推廣本案實際內容以現場公告為準
-            </p>
-            <div class="flex justify-center lg:items-center">
-              <input
-                type="checkbox"
-                name="agree"
-                id="agree"
-                class="mt-1 border-gray-300 bg-transparent"
-              />
-              <label
-                for="agree"
-                class="ml-2 cursor-pointer text-center !text-[14px] font-thin"
-              >
-                本人已知悉以上個人資料蒐集聲明事項。隱私權聲明
-              </label>
-            </div>
+        </div>
+        <form class="flex flex-col items-center px-10 text-white lg:w-2/3">
+          <h2 class="text-center">立即預約</h2>
+          <div
+            class="flex w-full max-lg:flex-col max-lg:gap-y-4 lg:items-stretch"
+          >
+            <input
+              class="grow rounded-md border-gray-300 bg-transparent px-4 py-3 placeholder:text-gray-200 lg:mr-6"
+              type="text"
+              placeholder="請輸入姓名"
+            />
+            <input
+              class="grow rounded-md border-gray-300 bg-transparent px-4 py-3 placeholder:text-gray-200 lg:mr-6"
+              type="tel"
+              placeholder="請輸入電話"
+              inputmode="tel"
+            />
+            <input
+              class="grow rounded-md border-gray-300 bg-transparent px-4 py-3 placeholder:text-gray-200 lg:mr-3"
+              type="text"
+              placeholder="請輸入驗證碼"
+            />
             <button
-              type="submit"
-              class="mt-10 rounded-md bg-gray-300 px-3 py-3 text-[12px] text-gray-600 lg:mx-auto lg:h-[50px] lg:px-3"
+              type="button"
+              class="rounded-md bg-gray-300 text-[12px] text-gray-600 max-lg:py-3 lg:mx-auto lg:px-3"
             >
-              送出表單
+              獲取驗證碼
             </button>
-          </form>
-          <div class="mt-16 lg:mt-24 lg:w-3/4">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.747553023251!2d121.49825807537681!3d25.042639877810764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a907bd882d53%3A0xa703718c44db0e30!2zMTA45Y-w5YyX5biC6JCs6I-v5Y2A6KW_5piM6KGXMjnlt7cy6Jmf!5e0!3m2!1szh-TW!2stw!4v1737011143413!5m2!1szh-TW!2stw"
-              width="100%"
-              height="500"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
           </div>
+          <div
+            class="mt-10 flex w-full items-stretch max-lg:flex-col max-lg:gap-y-4"
+          >
+            <input
+              class="rounded-md border-gray-300 bg-transparent px-4 py-3 placeholder:text-gray-200 lg:mr-6 lg:w-2/5"
+              type="email"
+              placeholder="請輸入電子郵件"
+              inputmode="email"
+            />
+            <select
+              name="city"
+              id="city-selector"
+              class="grow rounded-md border-gray-300 bg-transparent px-4 py-3 text-gray-200 lg:mr-6"
+            >
+              <option value="" selected disabled>縣市</option>
+            </select>
+            <select
+              name="district"
+              id="district-selector"
+              class="grow rounded-md border-gray-300 bg-transparent px-4 py-3 text-gray-200"
+            >
+              <option value="" selected disabled>鄉鎮市區</option>
+            </select>
+          </div>
+          <p class="mt-10 text-center !text-[14px] text-gray-300 lg:mt-16">
+            你所登錄的個人資料將作為以下用途（一）本網站所載之相關事宜通知（二）客戶管理與服務（三）本公司行銷業務之推廣本案實際內容以現場公告為準
+          </p>
+          <div class="flex justify-center lg:items-center">
+            <input
+              type="checkbox"
+              name="agree"
+              id="agree"
+              class="mt-1 border-gray-300 bg-transparent"
+            />
+            <label
+              for="agree"
+              class="ml-2 cursor-pointer text-center !text-[14px] font-thin"
+            >
+              本人已知悉以上個人資料蒐集聲明事項。隱私權聲明
+            </label>
+          </div>
+          <button
+            type="submit"
+            class="mt-10 rounded-md bg-gray-300 px-3 py-3 text-[12px] text-gray-600 lg:mx-auto lg:h-[50px] lg:px-3"
+          >
+            送出表單
+          </button>
+        </form>
+        <div class="mt-12 flex w-full flex-col items-center px-10 lg:w-2/3">
+          <iframe
+            class="aspect-square w-full lg:aspect-[16/7]"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.747553023251!2d121.49825807537681!3d25.042639877810764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a907bd882d53%3A0xa703718c44db0e30!2zMTA45Y-w5YyX5biC6JCs6I-v5Y2A6KW_5piM6KGXMjnlt7cy6Jmf!5e0!3m2!1szh-TW!2stw!4v1737011143413!5m2!1szh-TW!2stw"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </section>
     </main>
@@ -898,24 +947,6 @@
       $("#swiper-3-next").click(() => {
         slidesImgArr.removeClass("slide-in-view slide-before-1 slide-before-2");
 
-        const [prev2, prev1, current] = getNextSlideIdxArr();
-
-        slidesImgArr.each((idx, el) => {
-          if (idx === prev2) {
-            $(el).addClass("slide-before-2");
-          } else if (idx === prev1) {
-            $(el).addClass("slide-before-1");
-          } else if (idx === current) {
-            $(el).addClass("slide-in-view");
-          }
-        });
-
-        slideIdxArr = [prev2, prev1, current];
-      });
-
-      $("#swiper-3-prev").click(() => {
-        slidesImgArr.removeClass("slide-in-view slide-before-1 slide-before-2");
-
         const [prev2, prev1, current] = getPrevSlideIdxArr();
 
         slidesImgArr.each((idx, el) => {
@@ -929,11 +960,63 @@
         });
 
         slideIdxArr = [prev2, prev1, current];
+        $(".photo-text").text($(slidesImgArr[current]).attr("alt"));
+      });
+
+      $("#swiper-3-prev").click(() => {
+        slidesImgArr.removeClass("slide-in-view slide-before-1 slide-before-2");
+
+        const [prev2, prev1, current] = getNextSlideIdxArr();
+
+        slidesImgArr.each((idx, el) => {
+          if (idx === prev2) {
+            $(el).addClass("slide-before-2");
+          } else if (idx === prev1) {
+            $(el).addClass("slide-before-1");
+          } else if (idx === current) {
+            $(el).addClass("slide-in-view");
+          }
+        });
+
+        slideIdxArr = [prev2, prev1, current];
+        $(".photo-text").text($(slidesImgArr[current]).attr("alt"));
       });
 
       $(".mask").on("click", (el) => {
         $(el.currentTarget).fadeOut();
       });
+
+      const listenOnScreen = () => {
+        // 檢測是否為 iOS 設備
+        const iOS =
+          /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+        // 根據設備類型獲取正確的視口寬度
+        const viewportWidth = iOS ? screen.width : window.innerWidth;
+
+        // 選取所有使用 data-aos 屬性的元素
+        let elements = document.querySelectorAll("[data-aos]");
+
+        // 遍歷所有元素
+        for (let element of elements) {
+          // 檢查元素是否有 data-aos-anchor 屬性
+          if (!element.hasAttribute("data-aos-anchor")) {
+            // 如果元素缺少 data-aos-anchor 屬性，印出元素的標籤名稱、id 和 class
+            console.log(
+              "Element with tag: " +
+                element.tagName +
+                ", id: " +
+                element.id +
+                ", class: " +
+                element.className +
+                " is missing data-aos-anchor attribute.",
+            );
+          }
+        }
+      };
+
+      $(window).on("resize", listenOnScreen);
+      listenOnScreen();
     });
   </script>
 </html>
