@@ -4,23 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.min.js"
-      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-      crossorigin="anonymous"
-    ></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <title>瓏山林 PEARL RIVER 玥河</title>
     <style>
       :root {
         --main: #027484;
@@ -37,6 +35,27 @@
         font-family: var(--font-sans);
       }
 
+      .prose-lg h2,
+      .prose-lg h3 {
+        font-weight: 500;
+        letter-spacing: 0.1em;
+      }
+
+      .prose-lg h3 {
+        font-size: 20px;
+      }
+
+      .prose-lg p {
+        font-size: 16px;
+        font-weight: 100;
+      }
+
+      @media (min-width: 1536px) {
+        .prose-lg p {
+          font-size: 18px;
+        }
+      }
+
       .text-main {
         color: var(--main);
       }
@@ -48,134 +67,233 @@
       .bg-main {
         background-color: var(--main);
       }
-    </style>
-    <style type="text/tailwindcss">
-      .h2 {
-        @apply mb-4 text-3xl font-medium leading-relaxed;
+
+      .animate-fade {
+        animation-name: fade-lr;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
       }
 
-      .h3 {
-        @apply mb-2 text-xl font-medium;
+      @keyframes fade-lr {
+        0% {
+          transform: translateX(-10px);
+        }
+
+        25% {
+          transform: translateX(10px);
+        }
+
+        50% {
+          transform: translateX(-10px);
+        }
+
+        75% {
+          transform: translateX(10px);
+        }
+
+        100% {
+          transform: translateX(-10px);
+        }
+      }
+
+      .animate-bounce-soft {
+        animation: bounce 2s infinite;
+      }
+
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(-25%);
+          animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+        }
+        50% {
+          transform: none;
+          animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+        }
       }
     </style>
   </head>
   <body>
-    <header></header>
-    <main class="!prose-xl">
+    <header>
+      <h1 class="sr-only">瓏山林 PEARL RIVER 玥河</h1>
+    </header>
+    <main>
       <section
-        class="relative min-h-dvh overflow-hidden bg-[url('./assets/bg-img.jpg')]"
+        class="prose-lg relative min-h-dvh bg-[url('./assets/bg-img.jpg')] bg-cover bg-fixed bg-center bg-no-repeat"
       >
         <div
           class="absolute left-1/2 top-1/2 flex w-full -translate-x-1/2 -translate-y-1/2 flex-col items-center"
         >
           <img
-            class="max-w-64 lg:max-w-80"
+            class="max-w-64 lg:max-w-64"
             src="./assets/svg/logo-project.svg"
-            alt="logo"
+            alt="玥河 logo"
           />
           <h2
-            class="h2 mt-12 flex w-full flex-col items-center justify-center gap-3 text-white lg:mt-16 lg:flex-row lg:gap-6"
+            class="mt-12 w-full text-center font-medium tracking-[1.5rem] text-white max-lg:leading-relaxed lg:mt-10"
           >
-            <span class="-mr-6 tracking-[0.6em] lg:mr-0">西門雙星</span>
-            <span class="-mr-6 tracking-[0.6em]">靜巷藝邸</span>
+            西門雙星 <br class="lg:hidden" />
+            靜巷藝邸
           </h2>
-          <h2 class="h2 w-full space-x-3 text-center text-white">
+          <h2 class="w-full space-x-3 text-center font-medium text-white">
             <span class="tracking-wider">35-50坪</span>
             <span class="tracking-wider">2389-1888</span>
           </h2>
         </div>
-        <!-- <img
-          class="absolute bottom-0 left-0 translate-y-3/4"
-          src="./assets/svg/kv-float-lb-101.svg"
-          alt="deco line"
-        /> -->
-        <!-- <img
-          class="absolute bottom-0 left-0"
-          src="./assets/svg/kv-float-lb-102.svg"
-          alt="deco line"
-        /> -->
-      </section>
-      <section
-        class="flex min-h-dvh flex-col items-end bg-[url('./assets/s1-bg.jpg')] bg-center px-10 py-40 lg:p-48"
-      >
-        <img
-          class="mb-12 max-w-96 lg:max-w-[520px]"
-          src="./assets/svg/s1-text-en.svg"
-          alt="standing proudly in west taipei"
-        />
-        <h2 class="h2 text-end tracking-widest text-white">
-          揭序百年西區 <br />
-          世界之窗中的富隱名邸
-        </h2>
-      </section>
-      <section
-        class="relative flex flex-col gap-8 bg-[#D7D7D7] px-10 py-20 lg:grid lg:grid-cols-2 lg:gap-16 lg:p-40"
-      >
-        <img
-          class="col-span-1 max-lg:order-last"
-          src="./assets/s2-img.jpg"
-          alt="台北車站實景"
-        />
-        <div class="col-span-1">
+        <div class="max-lg:hidden">
           <img
-            class="mb-10 max-w-60 lg:mb-12 lg:max-w-[320px]"
-            src="./assets/svg/s2-text-en.svg"
-            alt="brighten west district"
+            class="absolute bottom-0 left-0 my-0 w-[200px]"
+            src="./assets/svg/kv-float-lb-101.svg"
+            alt="deco line"
           />
-          <h2 class="h2 text-main">
-            西區大未來 <br />
-            世界都在看
+          <img
+            class="absolute bottom-0 left-0 my-0 w-[600px]"
+            src="./assets/svg/kv-float-lb-102.svg"
+            alt="deco line"
+          />
+          <img
+            class="absolute bottom-0 left-0 my-0 w-[700px]"
+            src="./assets/svg/kv-float-lb-103.svg"
+            alt="deco line"
+          />
+          <img
+            class="absolute right-0 top-0 my-0 w-[260px]"
+            src="./assets/svg/kv-float-rt-101.svg"
+            alt="deco line"
+          />
+          <img
+            class="absolute right-0 top-0 my-0 w-[600px]"
+            src="./assets/svg/kv-float-rt-102.svg"
+            alt="deco line"
+          />
+          <img
+            class="absolute right-0 top-0 my-0 w-[420px]"
+            src="./assets/svg/kv-float-rt-103.svg"
+            alt="deco line"
+          />
+        </div>
+      </section>
+
+      <section
+        class="min-h-[120dvh] bg-[url('./assets/s1-bg.jpg')] bg-cover bg-bottom bg-no-repeat px-6 py-16 lg:min-h-dvh lg:p-20"
+      >
+        <div
+          data-aos="fade-up"
+          data-aos-delay="200"
+          class="prose-lg flex flex-col items-end"
+        >
+          <img
+            class="lg:max-w-[500px]"
+            src="./assets/svg/s1-text-en.svg"
+            alt="STANDING PROUDLY IN WEST TAIPEI"
+          />
+          <h2 class="text-end text-2xl leading-relaxed text-white max-lg:!mt-2">
+            揭序百年西區 <br />
+            世界之窗中的富隱名邸
           </h2>
-          <h3 class="h3">台北雙星千億開發 掀動西門增值潮</h3>
-          <p>
-            西區門戶計畫獨領上千億投資開發，打造台北國門大站「台北雙星」，遠超台北101近1.6倍的樓地板面積，六鐵共構車站、頂規商辦、國際百貨與高奢飯店齊發，定奪台灣下一次經濟奇蹟，為【瓏山林玥河】地段力全面鍍金。
-          </p>
+        </div>
+      </section>
+
+      <section class="relative bg-[#DCDCDC]">
+        <div
+          data-aos="fade-right"
+          class="grid gap-y-8 px-6 py-16 lg:grid-cols-2 lg:gap-16 lg:px-32 lg:py-40"
+        >
+          <div class="col-span-1 flex flex-col">
+            <img
+              class="-ml-5 aspect-video lg:-ml-6 lg:max-w-[360px]"
+              src="./assets/svg/s2-text-en.svg"
+              alt="BRIGHTEN WEST DISTRICT"
+            />
+            <div class="prose-lg mt-12 lg:mt-auto">
+              <h2 class="text-main font-medium tracking-widest lg:mt-auto">
+                西區大未來 <br />
+                世界都在看
+              </h2>
+              <h3 class="font-medium">
+                台北雙星千億開發 <br class="lg:hidden" />
+                掀動西門增值潮
+              </h3>
+              <p>
+                西區門戶計畫獨領上千億投資開發，打造台北國門大站「台北雙星」，遠超台北101近1.6倍的樓地板面積，六鐵共構車站、頂規商辦、國際百貨與高奢飯店齊發，定奪台灣下一次經濟奇蹟，為【瓏山林玥河】地段力全面鍍金。
+              </p>
+            </div>
+          </div>
+          <img
+            class="col-span-1 aspect-square object-cover lg:order-first lg:!mb-0"
+            src="./assets/s2-img.jpg"
+            alt="台北車站實景"
+          />
         </div>
         <div
-          class="absolute -right-10 -top-20 size-52 rounded-full bg-[url('./assets/bg-img.jpg')] bg-cover bg-fixed bg-center max-lg:hidden"
+          data-aos="fade-left"
+          class="absolute -right-10 -top-20 size-60 rounded-full bg-[url('./assets/bg-img.jpg')] bg-cover bg-fixed bg-center max-lg:hidden"
         ></div>
       </section>
-      <section
-        class="relative flex min-h-dvh w-full flex-col overflow-hidden bg-[url('./assets/s3-bg.jpg')] bg-fixed bg-right-bottom bg-no-repeat px-12 lg:bg-[length:118%_100%] lg:bg-[0_0] lg:px-28"
-      >
-        <div
-          class="left-1/2 top-36 mt-20 flex w-full flex-col items-center lg:absolute lg:mt-0 lg:-translate-x-1/2 lg:-translate-y-1/2"
-        >
+
+      <section class="relative flex max-lg:overflow-x-auto">
+        <div class="relative z-10 flex flex-col justify-between">
           <img
-            class="max-w-44 lg:max-w-32"
-            src="./assets/svg/logo-project.svg"
-            alt="logo"
+            src="./assets/s3-bg.jpg"
+            alt=""
+            class="object-cover max-lg:min-w-[1663px]"
           />
-        </div>
-        <div class="flex h-full grow flex-col justify-between pb-16 lg:pb-20">
-          <h2 class="h2 mt-24 tracking-widest text-white lg:mt-32">
-            西區門戶上升段 <br />
-            躍近西門雙捷運
-          </h2>
-          <div class="my-10 grow border-l border-white"></div>
-          <img
-            class="max-w-96"
-            src="./assets/svg/s3-text-en.svg"
-            alt="define the leadership vision"
-          />
+          <div
+            class="mask absolute left-0 top-0 z-10 size-full overscroll-contain bg-black/30 lg:hidden"
+          >
+            <img
+              src="./assets/svg/swipe.svg"
+              alt="左右滑動"
+              class="animate-fade sticky left-1/2 top-1/2 size-16 -translate-x-1/2 -translate-y-1/2"
+            />
+          </div>
+          <div>
+            <div
+              class="absolute left-1/2 top-36 mt-20 flex w-full -translate-x-[49%] -translate-y-1/2 flex-col items-center lg:mt-0"
+            >
+              <img
+                class="animate-bounce-soft max-w-44 lg:max-w-28"
+                src="./assets/svg/logo-project.svg"
+                alt="logo"
+              />
+            </div>
+            <div
+              class="prose-lg absolute left-10 top-20 flex flex-col justify-between lg:left-40 lg:top-0 lg:h-full"
+            >
+              <h2 class="h2 tracking-widest text-white lg:mt-32">
+                西區門戶上升段 <br />
+                躍近西門雙捷運
+              </h2>
+              <div class="my-2 grow border-l border-white max-lg:hidden"></div>
+              <img
+                class="mt-4 w-full lg:!mb-28 lg:w-[400px]"
+                src="./assets/svg/s3-text-en.svg"
+                alt="DEFINE THE LEADERSHIP VISION"
+              />
+            </div>
+          </div>
         </div>
       </section>
-      <section class="relative flex flex-col px-6 py-16 lg:p-32">
+
+      <section
+        data-aos="fade-left"
+        class="relative flex flex-col px-6 py-16 lg:p-32"
+      >
         <div
-          class="mb-10 flex flex-col gap-8 lg:flex-row lg:items-end lg:gap-40"
+          class="prose-lg mb-10 flex flex-col lg:flex-row lg:items-end lg:gap-40"
         >
           <img
-            class="order-4 max-w-[400px] lg:order-first"
+            class="order-first lg:mb-4 lg:max-w-[420px]"
             src="./assets/svg/s4-text-en.svg"
-            alt="metro ximen station"
+            alt="METRO XIMEN STATION"
           />
           <div>
-            <h2 class="h2 text-main w-full tracking-widest">
+            <h2 class="h2 text-main mt-0 w-full tracking-widest">
               捷運西門站 <br />
               雙金軸核心
             </h2>
             <h3 class="h3">1站台北雙星，北捷人潮第2大站</h3>
-            <p>
+            <p class="mb-0">
               板南×松山線交會「西門站」每日近8.4萬人潮進出站，長期穩居北捷前2大站，與台北車站共築北市最龐大交通樞紐！【瓏山林玥河】近鄰西門站，直達南軟與信義區，5站內集聚中山、忠孝新生、東區、三重站，稱霸軌道經濟學！
             </p>
           </div>
@@ -184,34 +302,39 @@
           class="aspect-[5/4] bg-[url('./assets/s5-img.jpg')] bg-cover bg-[50%_80%] lg:mt-4 lg:aspect-[5/2]"
         ></div>
         <div
-          class="absolute -left-8 bottom-10 size-64 rounded-full bg-[url('./assets/bg-img.jpg')] bg-cover bg-fixed bg-center max-lg:hidden"
+          data-aos="fade-right"
+          class="absolute -left-16 bottom-10 size-72 rounded-full bg-[url('./assets/bg-img.jpg')] bg-cover bg-fixed bg-center max-lg:hidden"
         ></div>
       </section>
-      <section class="relative overflow-hidden px-6 py-16 lg:px-32 lg:py-10">
+
+      <section
+        data-aos="fade-right"
+        class="relative overflow-hidden px-6 pb-12 lg:px-32 lg:py-10"
+      >
         <div class="lg:grid lg:grid-cols-2 lg:gap-20">
-          <div class="max-lg:flex max-lg:flex-col lg:col-span-1">
-            <h2 class="h2 tracking-widest text-[#027484] lg:!mb-12">
+          <div class="prose-lg max-lg:flex max-lg:flex-col lg:col-span-1">
+            <h2 class="h2 tracking-widest text-[#027484] lg:mb-12">
               速捷三動脈 <br />
               決勝交通力
             </h2>
             <img
-              class="max-w-[300px] max-lg:order-first max-lg:mb-8 lg:max-w-80"
+              class="max-lg:order-first max-lg:mb-10 lg:my-12 lg:max-w-[360px]"
               src="./assets/svg/s5-text-en.svg"
               alt="logo"
             />
-            <h3 class="h3 mt-4 lg:mt-12">市民大道╳環河南北路╳中興大橋</h3>
+            <h3 class="mt-0 lg:mt-12">市民大道╳環河南北路╳中興大橋</h3>
             <p>
               【瓏山林玥河】向北直通「市民大道」，愜意橫跨北市東西向七大區；向西接軌「環河南北路」，中山高環北交流道、大稻埕河濱公園、西門町、板橋全線奔赴；「中興橋」來往三重開車往來便利，雙北來去自如。
             </p>
           </div>
           <div class="col-span-1 max-lg:mt-12">
-            <div id="swiper-1" class="swiper aspect-[4/5] size-full">
-              <div class="text-main flex items-center gap-2 pb-2">
+            <div id="swiper-1" class="swiper size-full">
+              <div class="text-main mb-6 flex items-center gap-2">
                 <button id="swiper-1-prev">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="28"
-                    height="28"
+                    width="24"
+                    height="24"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -219,17 +342,17 @@
                       stroke="currentColor"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      stroke-width="1.5"
+                      stroke-width="1"
                       d="M20 12H4m0 0l6-6m-6 6l6 6"
                     />
                   </svg>
                 </button>
-                <div class="border-main h-5 border-l-2"></div>
+                <div class="border-main h-4 border-l"></div>
                 <button id="swiper-1-next">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="28"
-                    height="28"
+                    width="24"
+                    height="24"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -237,169 +360,83 @@
                       stroke="currentColor"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      stroke-width="1.5"
+                      stroke-width="1"
                       d="M4 12h16m0 0l-6-6m6 6l-6 6"
                     />
                   </svg>
                 </button>
               </div>
-              <div class="swiper-wrapper">
-                <div
-                  class="swiper-slide relative size-full bg-[url('./assets/中興橋.jpg')] bg-cover bg-center bg-no-repeat"
-                ></div>
-                <div
-                  class="swiper-slide relative size-full bg-[url('./assets/交通-市民大道.jpg')] bg-cover bg-center bg-no-repeat"
-                ></div>
-                <div
-                  class="swiper-slide relative size-full bg-[url('./assets/交通-環河高架快速道路.jpg')] bg-cover bg-center bg-no-repeat"
-                ></div>
+              <div class="swiper-wrapper aspect-square lg:aspect-[8/9]">
+                <div class="swiper-slide relative">
+                  <img
+                    src="./assets/中興橋.jpg"
+                    alt="中興橋"
+                    class="absolute inset-0 size-full object-cover"
+                  />
+                </div>
+                <div class="swiper-slide relative">
+                  <img
+                    src="./assets/交通-市民大道.jpg"
+                    alt="交通-市民大道"
+                    class="absolute inset-0 size-full object-cover"
+                  />
+                </div>
+                <div class="swiper-slide relative">
+                  <img
+                    src="./assets/交通-環河高架快速道路.jpg"
+                    alt="交通-環河高架快速道路"
+                    class="absolute inset-0 size-full object-cover"
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
       <section
-        class="relative space-y-10 px-6 lg:space-y-40 lg:px-28 lg:pb-28 lg:pt-16"
+        data-aos="fade-left"
+        class="relative grid grid-cols-1 px-6 pb-16 lg:grid-cols-8 lg:gap-x-6 lg:gap-y-28 lg:px-32 lg:py-16"
       >
-        <div class="flex flex-col lg:grid lg:grid-cols-4 lg:gap-32">
-          <div
-            id="swiper-2"
-            class="swiper col-span-1 mt-12 aspect-square size-full lg:mt-0"
-          >
-            <div class="text-main flex items-center gap-2 pb-2">
-              <button id="swiper-2-prev">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="28"
-                  height="28"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                    d="M20 12H4m0 0l6-6m-6 6l6 6"
-                  />
-                </svg>
-              </button>
-              <div class="border-main h-5 border-l-2"></div>
-              <button id="swiper-2-next">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="28"
-                  height="28"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                    d="M4 12h16m0 0l-6-6m6 6l-6 6"
-                  />
-                </svg>
-              </button>
-            </div>
-            <div class="swiper-wrapper">
-              <div
-                class="swiper-slide relative size-full bg-[url('./assets/商圈-西門町-彩虹.jpg')] bg-cover bg-center bg-no-repeat"
-              ></div>
-              <div
-                class="swiper-slide relative size-full bg-[url('./assets/商圈-西門町-HM.jpg')] bg-cover bg-center bg-no-repeat"
-              ></div>
-              <div
-                class="swiper-slide relative size-full bg-[url('./assets/商圈-西門町-萬年.jpg')] bg-cover bg-center bg-no-repeat"
-              ></div>
-              <div
-                class="swiper-slide relative size-full bg-[url('./assets/商圈-西門町-泡泡.jpg')] bg-cover bg-center bg-no-repeat"
-              ></div>
+        <div class="lg:col-span-3 lg:pr-10">
+          <div id="swiper-2" class="swiper">
+            <div class="swiper-wrapper aspect-square">
+              <div class="swiper-slide relative">
+                <img
+                  src="./assets/商圈-西門町-彩虹.jpg"
+                  alt="商圈-西門町-彩虹"
+                  class="absolute inset-0 size-full object-cover"
+                />
+              </div>
+              <div class="swiper-slide relative">
+                <img
+                  src="./assets/商圈-西門町-HM.jpg"
+                  alt="商圈-西門町-HM"
+                  class="absolute inset-0 size-full object-cover"
+                />
+              </div>
+              <div class="swiper-slide relative">
+                <img
+                  src="./assets/商圈-西門町-萬年.jpg"
+                  alt="商圈-西門町-萬年"
+                  class="absolute inset-0 size-full object-cover"
+                />
+              </div>
+              <div class="swiper-slide relative">
+                <img
+                  src="./assets/商圈-西門町-泡泡.jpg"
+                  alt="商圈-西門町-泡泡"
+                  class="absolute inset-0 size-full object-cover"
+                />
+              </div>
             </div>
           </div>
-          <div
-            class="relative order-first col-span-3 w-full border-t border-black pt-16 lg:order-2"
-          >
-            <img
-              class="max-w-[300px] max-lg:mb-8"
-              src="./assets/svg/s6-text-en.svg"
-              alt="POETIC LIVING STYLE"
-            />
-            <h2
-              class="h2 text-[#027484] max-lg:mb-0 lg:absolute lg:left-[16vw] lg:top-16"
-            >
-              經典的深蘊 西門心況味
-            </h2>
-          </div>
-        </div>
-        <div class="lg:grid lg:grid-cols-4 lg:gap-32">
-          <div class="col-span-1">
-            <h3 class="h3">縱享西門町潮流 靜邀老西區人文</h3>
-            <p>
-              出門漫步在城西街道煙火氣息中，總能偶遇米其林多次欽點的在地美饌品牌；轉身即是武昌街、成都路的全球電影重鎮，西門町商圈新潮品味遊覽不盡。流行尖端交匯百年文化，住在西區正核心，繼續精彩一世紀。
-            </p>
-          </div>
-          <div class="lg:col-span-3">
-            <img src="./assets/商圈-西門町-紅樓- (2).jpg" alt="" />
-          </div>
-        </div>
-        <div
-          class="absolute -right-60 -top-80 z-[2] size-[35vw] rounded-full bg-[url('./assets/bg-img.jpg')] bg-cover bg-fixed bg-center max-lg:hidden"
-        ></div>
-      </section>
-      <section
-        class="relative min-h-dvh overflow-hidden bg-[url('./assets/外觀合成視覺.jpg')] bg-cover bg-center bg-no-repeat px-6 py-16 lg:px-60 lg:py-28"
-      >
-        <div class="lg:max-w-[40%]">
-          <img
-            class="max-w-lg"
-            src="./assets/svg/s7-text-en.svg"
-            alt="MANSION & MASTERPIECE"
-          />
-          <h2 class="h2 !my-12 text-white">新古典名宅 繁心一巷靜</h2>
-          <img
-            class="mb-12 lg:max-w-[20vw]"
-            src="./assets/2Z4A3524.jpg"
-            alt=""
-          />
-          <h3 class="h3 text-white">西門特區靜巷名邸 雍雅大器落成</h3>
-          <p class="text-white">
-            最有底蘊的老西區，最有未來的新座標，【瓏山林玥河】藏城市繁華於靜，享隱巷慢活哲學，目光高層相望河岸，地標層峰奢侈寧靜。在輝映台北雙星首席的西區，難得頂級規格的靜巷大戶名宅，才是真傳世價值。
-          </p>
-        </div>
-      </section>
-      <section
-        class="relative flex flex-col gap-60 overflow-hidden px-6 py-16 lg:grid lg:grid-cols-2 lg:p-28"
-      >
-        <div
-          class="order-last flex flex-wrap items-start lg:order-first lg:col-span-1"
-        >
-          <div
-            id="swiper-3"
-            class="swiper mt-12 flex aspect-[2/3] w-full grow items-start lg:mt-0"
-          >
-            <div class="swiper-wrapper">
-              <div
-                class="swiper-slide relative size-full bg-[url('./assets/商圈-西門町-彩虹.jpg')] bg-cover bg-center bg-no-repeat"
-              ></div>
-              <div
-                class="swiper-slide relative size-full bg-[url('./assets/商圈-西門町-HM.jpg')] bg-cover bg-center bg-no-repeat"
-              ></div>
-              <div
-                class="swiper-slide relative size-full bg-[url('./assets/商圈-西門町-萬年.jpg')] bg-cover bg-center bg-no-repeat"
-              ></div>
-              <div
-                class="swiper-slide relative size-full bg-[url('./assets/商圈-西門町-泡泡.jpg')] bg-cover bg-center bg-no-repeat"
-              ></div>
-            </div>
-          </div>
-          <div class="text-main ml-2 flex items-center gap-2 pb-2">
-            <button id="swiper-3-prev">
+          <div class="text-main mt-4 flex items-center gap-2">
+            <button id="swiper-2-prev">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="28"
-                height="28"
+                width="24"
+                height="24"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -407,17 +444,17 @@
                   stroke="currentColor"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="1.5"
+                  stroke-width="1"
                   d="M20 12H4m0 0l6-6m-6 6l6 6"
                 />
               </svg>
             </button>
-            <div class="border-main h-5 border-l-2"></div>
-            <button id="swiper-3-next">
+            <div class="border-main h-4 border-l"></div>
+            <button id="swiper-2-next">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="28"
-                height="28"
+                width="24"
+                height="24"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -425,22 +462,152 @@
                   stroke="currentColor"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="1.5"
+                  stroke-width="1"
                   d="M4 12h16m0 0l-6-6m6 6l-6 6"
                 />
               </svg>
             </button>
           </div>
-          <div
-            class="text-main mt-2 flex w-full items-center gap-4 text-lg font-medium after:grow after:border-b-2 after:border-[var(--main)] after:content-['']"
+        </div>
+        <div
+          class="prose-lg relative border-t border-black pt-10 max-lg:order-first lg:col-span-5"
+        >
+          <img
+            class="max-lg:mb-0 lg:max-w-[460px]"
+            src="./assets/svg/s6-text-en.svg"
+            alt="POETIC LIVING STYLE"
+          />
+          <h2
+            class="text-[#027484] max-lg:mb-6 lg:absolute lg:-top-2 lg:left-[260px]"
           >
-            瓏山林博物館
+            經典的深蘊 西門心況味
+          </h2>
+        </div>
+        <div class="prose-lg max-lg:mt-12 lg:col-span-3">
+          <h3>縱享西門町潮流 靜邀老西區人文</h3>
+          <p>
+            出門漫步在城西街道煙火氣息中，總能偶遇米其林多次欽點的在地美饌品牌；轉身即是武昌街、成都路的全球電影重鎮，西門町商圈新潮品味遊覽不盡。流行尖端交匯百年文化，住在西區正核心，繼續精彩一世紀。
+          </p>
+        </div>
+        <div class="max-lg:mt-6 lg:col-span-5 lg:mb-0 lg:pl-6">
+          <img
+            src="./assets/商圈-西門町-紅樓- (2).jpg"
+            alt="商圈-西門町-紅樓"
+            class="aspect-square object-cover lg:aspect-[7/3]"
+          />
+        </div>
+        <div
+          class="absolute -right-60 -top-72 z-[2] size-[35vw] rounded-full bg-[url('./assets/bg-img.jpg')] bg-cover bg-fixed bg-center max-lg:hidden"
+        ></div>
+      </section>
+
+      <section
+        class="relative min-h-dvh overflow-hidden bg-[url('./assets/外觀合成視覺.jpg')] bg-cover bg-center bg-no-repeat px-6 py-16 lg:px-60 lg:pt-20"
+      >
+        <div data-aos="fade-up" class="prose-lg lg:max-w-[50%]">
+          <img
+            class="lg:max-w-[280px]"
+            src="./assets/svg/s7-text-en.svg"
+            alt="MANSION & MASTERPIECE"
+          />
+          <h2 class="my-12 text-white">新古典名宅 繁心一巷靜</h2>
+          <img
+            class="mb-12 aspect-[5/3] object-cover lg:max-w-[360px]"
+            src="./assets/2Z4A3524.jpg"
+            alt=""
+          />
+          <h3 class="text-white">西門特區靜巷名邸 雍雅大器落成</h3>
+          <p class="text-white lg:mb-24">
+            最有底蘊的老西區，最有未來的新座標，【瓏山林玥河】藏城市繁華於靜，享隱巷慢活哲學，目光高層相望河岸，地標層峰奢侈寧靜。在輝映台北雙星首席的西區，難得頂級規格的靜巷大戶名宅，才是真傳世價值。
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="relative flex flex-col overflow-hidden px-6 py-16 lg:grid lg:grid-cols-2 lg:justify-stretch lg:gap-x-36 lg:px-28 lg:py-40"
+      >
+        <div class="flex w-full items-start lg:col-span-1">
+          <div class="size-full grow">
+            <div id="swiper-3" class="swiper size-full">
+              <div class="swiper-wrapper max-lg:aspect-square">
+                <div class="swiper-slide relative">
+                  <img
+                    src="./assets/商圈-西門町-彩虹.jpg"
+                    alt="商圈-西門町-彩虹"
+                    class="absolute inset-0 size-full object-cover"
+                  />
+                </div>
+                <div class="swiper-slide relative">
+                  <img
+                    src="./assets/商圈-西門町-HM.jpg"
+                    alt="商圈-西門町-HM"
+                    class="absolute inset-0 size-full object-cover"
+                  />
+                </div>
+                <div class="swiper-slide relative">
+                  <img
+                    src="./assets/商圈-西門町-萬年.jpg"
+                    alt="商圈-西門町-萬年"
+                    class="absolute inset-0 size-full object-cover"
+                  />
+                </div>
+                <div class="swiper-slide relative">
+                  <img
+                    src="./assets/商圈-西門町-泡泡.jpg"
+                    alt="商圈-西門町-泡泡"
+                    class="absolute inset-0 size-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="text-main mt-2 flex w-full items-center gap-4 text-lg font-medium after:grow after:border-b-2 after:border-[var(--main)] after:content-['']"
+            >
+              瓏山林博物館
+            </div>
+          </div>
+          <div class="text-main flex items-center gap-2 lg:ml-6 lg:mt-6">
+            <button id="swiper-3-prev">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1"
+                  d="M20 12H4m0 0l6-6m-6 6l6 6"
+                />
+              </svg>
+            </button>
+            <div class="border-main h-4 border-l"></div>
+            <button id="swiper-3-next">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1"
+                  d="M4 12h16m0 0l-6-6m6 6l-6 6"
+                />
+              </svg>
+            </button>
           </div>
         </div>
-        <div class="col-span-1">
-          <h2 class="text-main mb-6">縱橫半世紀 巨擘級品牌</h2>
+        <div class="prose-lg col-span-1 max-lg:order-first">
+          <h2 class="text-main">縱橫半世紀 巨擘級品牌</h2>
           <img
-            class="max-w-xl"
+            class="w-full lg:max-w-xl"
             src="./assets/svg/s8-text-en.svg"
             alt="CONSTRUCTION BRAND"
           />
@@ -448,147 +615,226 @@
           <p>
             近50年的品牌底蘊，瓏山林營建以敏銳的選地眼界，一路鎖定台北精華土地，完美要求建築品質，構築生活最美好的樣貌。品牌版圖更跨足金融、飯店、媒體等巨擘，賦予【瓏山林玥河】如山般穩重厚實的藝術建築風景。
           </p>
-          <div class="relative border border-black p-10">
-            <div>經典名作｜</div>
-            <div>
+          <div
+            class="relative mb-12 border border-black p-6 lg:mb-0 lg:max-w-[85%]"
+          >
+            <h3 class="mt-0">經典名作｜</h3>
+            <p class="mb-0">
               瓏山林博物館、瓏山林世貿博物館、瓏山林榮馥大院、瓏山林台北中和飯店、瓏山林蘇澳冷熱泉度假飯店
-            </div>
+            </p>
             <div
-              class="absolute -bottom-20 -right-40 z-[2] size-60 rounded-full bg-[url('./assets/bg-img.jpg')] bg-cover bg-fixed bg-center max-lg:hidden"
+              class="absolute -bottom-20 right-[-35%] z-[2] size-48 rounded-full bg-[url('./assets/bg-img.jpg')] bg-cover bg-fixed bg-center max-lg:hidden"
             ></div>
           </div>
         </div>
       </section>
+
       <section
-        class="flex min-h-dvh flex-col items-center overflow-hidden bg-[url('./assets/bg-img.jpg')] py-40"
+        class="prose-lg bg-[url('./assets/bg-img.jpg')] bg-cover bg-no-repeat py-24 lg:py-40"
       >
-        <img
-          class="max-w-[10vw]"
-          src="./assets/svg/logo-project.svg"
-          alt="logo"
-        />
-        <h2
-          class="!mt-0 w-full text-center tracking-widest text-white before:mx-auto before:my-20 before:block before:w-2/3 before:border-t-2 before:border-white before:content-['']"
-        >
-          基本資料
-        </h2>
-        <div class="flex w-2/3 flex-wrap justify-center gap-6 px-12 text-white">
-          <div class="before:text-sm before:content-['投資興建']">
-            <span class="mx-0.5 text-sm">|</span>
-            瓏山林企業股份有限公司
-          </div>
-          <div class="before:text-sm before:content-['營建工程']">
-            <span class="mx-0.5 text-sm">|</span>
-            瓏山林營建股份有限公司
-          </div>
-          <div class="before:text-sm before:content-['建照號碼']">
-            <span class="mx-0.5 text-sm">|</span>
-            109建字第0242號
-          </div>
-          <div class="before:text-sm before:content-['使照號碼']">
-            <span class="mx-0.5 text-sm">|</span>
-            113使字第0186號
-          </div>
-          <div class="before:text-sm before:content-['基地面積']">
-            <span class="mx-0.5 text-sm">|</span>約467坪
-          </div>
-          <div class="before:text-sm before:content-['建築樓高']">
-            <span class="mx-0.5 text-sm">|</span>
-            地上13層、地下3層
-          </div>
-          <div class="before:text-sm before:content-['規劃坪數']">
-            <span class="mx-0.5 text-sm">|</span>35-50坪
-          </div>
-          <div class="before:text-sm before:content-['基地位置']">
-            <span class="mx-0.5 text-sm">|</span>
-            台北市萬華區西昌街29巷8號
-          </div>
-          <div
-            class="flex items-end before:text-sm before:content-['建築代銷']"
+        <div class="flex flex-col items-center">
+          <img
+            class="max-w-[200px] lg:mb-0"
+            src="./assets/svg/logo-project.svg"
+            alt="logo"
+          />
+          <h2
+            class="mt-0 w-full text-center tracking-widest text-white before:mx-auto before:my-20 before:block before:w-[85%] before:border-t before:border-white before:content-[''] max-lg:mt-10 max-lg:before:hidden"
           >
-            <span class="mx-0.5 text-sm">|</span>
-            <img
-              class="!my-0 w-6"
-              src="./assets/svg/logo.svg"
-              alt=""
-            />海心國際股份有限公司
+            基本資料
+          </h2>
+          <div
+            class="gap-x-6 text-white lg:flex lg:w-[75%] lg:flex-wrap lg:justify-center"
+          >
+            <p
+              class="text-center text-[16px] before:text-[12px] before:content-['投資興建'] max-lg:mt-0"
+            >
+              <span class="mx-0.5">|</span>
+              瓏山林企業股份有限公司
+            </p>
+            <p
+              class="text-center text-[16px] before:text-[12px] before:content-['營建工程']"
+            >
+              <span class="mx-0.5">|</span>
+              瓏山林營建股份有限公司
+            </p>
+            <p
+              class="text-center text-[16px] before:text-[12px] before:content-['建照號碼']"
+            >
+              <span class="mx-0.5">|</span>
+              109建字第0242號
+            </p>
+            <p
+              class="text-center text-[16px] before:text-[12px] before:content-['使照號碼']"
+            >
+              <span class="mx-0.5">|</span>
+              113使字第0186號
+            </p>
+            <p
+              class="text-center text-[16px] before:text-[12px] before:content-['基地面積']"
+            >
+              <span class="mx-0.5">|</span>約467坪
+            </p>
+            <p
+              class="text-center text-[16px] before:text-[12px] before:content-['建築樓高']"
+            >
+              <span class="mx-0.5">|</span>
+              地上13層、地下3層
+            </p>
+            <p
+              class="text-center text-[16px] before:text-[12px] before:content-['規劃坪數']"
+            >
+              <span class="mx-0.5">|</span>35-50坪
+            </p>
+            <p
+              class="text-center text-[16px] before:text-[12px] before:content-['基地位置']"
+            >
+              <span class="mx-0.5">|</span>
+              台北市萬華區西昌街29巷8號
+            </p>
+            <p
+              class="flex items-end text-center text-[16px] before:text-[12px] before:content-['建築代銷'] max-lg:justify-center"
+            >
+              <span class="mx-0.5">|</span>
+              <img class="!my-0 mx-1 w-6" src="./assets/svg/logo.svg" alt="" />
+              海心國際股份有限公司
+            </p>
+            <p
+              class="text-center text-[16px] before:text-[12px] before:content-['接待會館']"
+            >
+              <span class="mx-0.5">|</span>
+              台北市萬華區西昌街29巷2號
+              <span
+                class="ml-2 text-[22px] font-medium max-lg:mt-2 max-lg:block"
+                >02-2389-1888</span
+              >
+            </p>
           </div>
-          <div class="before:text-sm before:content-['接待會館']">
-            <span class="mx-0.5 text-sm">|</span>
-            台北市萬華區西昌街29巷2號 02-2389-1888
+          <form class="w-5/8 flex flex-col px-10 text-white">
+            <h2 class="text-center">立即預約</h2>
+            <div
+              class="flex w-full max-lg:flex-col max-lg:gap-y-4 lg:items-stretch"
+            >
+              <input
+                class="grow rounded-md border-gray-300 bg-transparent px-4 py-3 placeholder:text-gray-200 lg:mr-6"
+                type="text"
+                placeholder="請輸入姓名"
+              />
+              <input
+                class="grow rounded-md border-gray-300 bg-transparent px-4 py-3 placeholder:text-gray-200 lg:mr-6"
+                type="tel"
+                placeholder="請輸入電話"
+                inputmode="tel"
+              />
+              <input
+                class="grow rounded-md border-gray-300 bg-transparent px-4 py-3 placeholder:text-gray-200 lg:mr-3"
+                type="text"
+                placeholder="請輸入驗證碼"
+              />
+              <button
+                type="button"
+                class="rounded-md bg-gray-300 text-[12px] text-gray-600 max-lg:py-3 lg:mx-auto lg:px-3"
+              >
+                獲取驗證碼
+              </button>
+            </div>
+            <div
+              class="mt-10 flex items-stretch max-lg:flex-col max-lg:gap-y-4"
+            >
+              <input
+                class="rounded-md border-gray-300 bg-transparent px-4 py-3 placeholder:text-gray-200 lg:mr-6 lg:w-2/5"
+                type="email"
+                placeholder="請輸入電子郵件"
+                inputmode="email"
+              />
+              <select
+                name="city"
+                id="city-selector"
+                class="grow rounded-md border-gray-300 bg-transparent px-4 py-3 text-gray-200 lg:mr-6"
+              >
+                <option value="" selected disabled>縣市</option>
+              </select>
+              <select
+                name="district"
+                id="district-selector"
+                class="grow rounded-md border-gray-300 bg-transparent px-4 py-3 text-gray-200"
+              >
+                <option value="" selected disabled>鄉鎮市區</option>
+              </select>
+            </div>
+            <p class="mt-10 text-center !text-[14px] text-gray-300 lg:mt-16">
+              你所登錄的個人資料將作為以下用途（一）本網站所載之相關事宜通知（二）客戶管理與服務（三）本公司行銷業務之推廣本案實際內容以現場公告為準
+            </p>
+            <div class="flex justify-center lg:items-center">
+              <input
+                type="checkbox"
+                name="agree"
+                id="agree"
+                class="mt-1 border-gray-300 bg-transparent"
+              />
+              <label
+                for="agree"
+                class="ml-2 cursor-pointer text-center !text-[14px] font-thin"
+              >
+                本人已知悉以上個人資料蒐集聲明事項。隱私權聲明
+              </label>
+            </div>
+            <button
+              type="submit"
+              class="mt-10 rounded-md bg-gray-300 px-3 py-3 text-[12px] text-gray-600 lg:mx-auto lg:h-[50px] lg:px-3"
+            >
+              送出表單
+            </button>
+          </form>
+          <div class="mt-16 lg:mt-24 lg:w-3/4">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.747553023251!2d121.49825807537681!3d25.042639877810764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a907bd882d53%3A0xa703718c44db0e30!2zMTA45Y-w5YyX5biC6JCs6I-v5Y2A6KW_5piM6KGXMjnlt7cy6Jmf!5e0!3m2!1szh-TW!2stw!4v1737011143413!5m2!1szh-TW!2stw"
+              width="100%"
+              height="500"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
-        <form class="w-1/2 text-white">
-          <h3 class="!mb-12 text-center">立即預約</h3>
-          <div class="flex items-stretch">
-            <input
-              class="mr-6 grow rounded-md border-gray-300 bg-transparent px-4 py-3 placeholder:text-gray-200"
-              type="text"
-              placeholder="請輸入姓名"
-            />
-            <input
-              class="mr-6 grow rounded-md border-gray-300 bg-transparent px-4 py-3 placeholder:text-gray-200"
-              type="tel"
-              placeholder="請輸入電話"
-              inputmode="tel"
-            />
-            <input
-              class="mr-3 grow rounded-md border-gray-300 bg-transparent px-4 py-3 placeholder:text-gray-200"
-              type="text"
-              placeholder="請輸入驗證碼"
-            />
-            <button
-              type="button"
-              class="rounded-md bg-gray-300 px-3 text-[12px] text-gray-500"
-            >
-              獲取驗證碼
-            </button>
-          </div>
-          <div class="mt-10 flex items-stretch">
-            <input
-              class="mr-6 w-2/5 rounded-md border-gray-300 bg-transparent px-4 py-3 placeholder:text-gray-200"
-              type="email"
-              placeholder="請輸入電子郵件"
-              inputmode="email"
-            />
-            <select
-              name="city"
-              id="city-selector"
-              class="mr-6 grow rounded-md border-gray-300 bg-transparent px-4 py-3 text-gray-200"
-            >
-              <option value="" selected disabled>縣市</option>
-            </select>
-            <select
-              name="district"
-              id="district-selector"
-              class="grow rounded-md border-gray-300 bg-transparent px-4 py-3 text-gray-200"
-            >
-              <option value="" selected disabled>鄉鎮市區</option>
-            </select>
-          </div>
-          <p class="!mt-20 text-center text-sm text-gray-300">
-            你所登錄的個人資料將作為以下用途（一）本網站所載之相關事宜通知（二）客戶管理與服務（三）本公司行銷業務之推廣本案實際內容以現場公告為準
-          </p>
-          <input type="checkbox" name="agree" id="agree" />
-          <label for="agree"
-            >本人已知悉以上個人資料蒐集聲明事項。隱私權聲明</label
-          >
-          <button type="submit">送出表單</button>
-        </form>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.747553023251!2d121.49825807537681!3d25.042639877810764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a907bd882d53%3A0xa703718c44db0e30!2zMTA45Y-w5YyX5biC6JCs6I-v5Y2A6KW_5piM6KGXMjnlt7cy6Jmf!5e0!3m2!1szh-TW!2stw!4v1737011143413!5m2!1szh-TW!2stw"
-          width="600"
-          height="450"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
       </section>
     </main>
   </body>
+  <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
     $(document).ready(() => {
+      // 初始化 AOS 庫
+      AOS.init({
+        offset: 200,
+        duration: 1400,
+        once: false, // 允許重複動畫，視需求而定
+        mirror: false, // 禁用鏡像效果
+        disableMutationObserver: true, // 保持啟用，以便動態內容也能正常工作
+      });
+
+      let ticking = false;
+      $(window).on("scroll", () => {
+        if (!ticking) {
+          window.requestAnimationFrame(function () {
+            AOS.refresh();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+
+      // 額外的視窗大小改變事件監聽器
+      $(window).on("resize", () => {
+        AOS.refresh();
+      });
+
       const swiper1 = new Swiper("#swiper-1", {
         loop: true,
       });
@@ -611,6 +857,24 @@
 
       $("#swiper-2-next").click(() => {
         swiper2.slideNext();
+      });
+
+      const swiper3 = new Swiper("#swiper-3", {
+        loop: true,
+        slidesPerView: 3,
+        spaceBetween: -30,
+      });
+
+      $("#swiper-3-prev").click(() => {
+        swiper3.slidePrev();
+      });
+
+      $("#swiper-3-next").click(() => {
+        swiper3.slideNext();
+      });
+
+      $(".mask").on("click", (el) => {
+        $(el.currentTarget).fadeOut();
       });
     });
   </script>
