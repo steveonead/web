@@ -111,6 +111,35 @@
           animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
         }
       }
+
+      .slide {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        transition:
+          transform 0.5s,
+          opacity 0.5s;
+      }
+
+      .slide-in-view {
+        opacity: 1;
+        z-index: 3;
+      }
+
+      .slide-before-1 {
+        opacity: 0.8;
+        transform: scale(80%) translateX(-45%);
+        z-index: 2;
+      }
+
+      .slide-before-2 {
+        opacity: 0.5;
+        transform: scale(60%) translateX(-100%);
+        z-index: 1;
+      }
     </style>
   </head>
   <body>
@@ -369,22 +398,22 @@
               <div class="swiper-wrapper aspect-square lg:aspect-[8/9]">
                 <div class="swiper-slide relative">
                   <img
-                    src="./assets/中興橋.jpg"
+                    src="./assets/zhongxing-bridge.jpg"
                     alt="中興橋"
                     class="absolute inset-0 size-full object-cover"
                   />
                 </div>
                 <div class="swiper-slide relative">
                   <img
-                    src="./assets/交通-市民大道.jpg"
-                    alt="交通-市民大道"
+                    src="./assets/civic-blvd.jpg"
+                    alt="市民大道"
                     class="absolute inset-0 size-full object-cover"
                   />
                 </div>
                 <div class="swiper-slide relative">
                   <img
-                    src="./assets/交通-環河高架快速道路.jpg"
-                    alt="交通-環河高架快速道路"
+                    src="./assets/expressway.jpg"
+                    alt="環河高架快速道路"
                     class="absolute inset-0 size-full object-cover"
                   />
                 </div>
@@ -491,8 +520,8 @@
         </div>
         <div class="max-lg:mt-6 lg:col-span-5 lg:mb-0 lg:pl-6">
           <img
-            src="./assets/商圈-西門町-紅樓- (2).jpg"
-            alt="商圈-西門町-紅樓"
+            src="./assets/red-house.jpg"
+            alt="西門町 紅樓"
             class="aspect-square object-cover lg:aspect-[7/3]"
           />
         </div>
@@ -502,7 +531,7 @@
       </section>
 
       <section
-        class="relative min-h-dvh overflow-hidden bg-[url('./assets/外觀合成視覺.jpg')] bg-cover bg-center bg-no-repeat px-6 py-16 lg:px-60 lg:pt-20"
+        class="relative min-h-dvh overflow-hidden bg-[url('./assets/building-bg.jpg')] bg-cover bg-center bg-no-repeat px-6 py-16 lg:px-60 lg:pt-20"
       >
         <div data-aos="fade-up" class="prose-lg lg:max-w-[50%]">
           <img
@@ -513,8 +542,8 @@
           <h2 class="my-12 text-white">新古典名宅 繁心一巷靜</h2>
           <img
             class="mb-12 aspect-[5/3] object-cover lg:max-w-[360px]"
-            src="./assets/2Z4A3524.jpg"
-            alt=""
+            src="./assets/building-look-up.jpg"
+            alt="仰看圖"
           />
           <h3 class="text-white">西門特區靜巷名邸 雍雅大器落成</h3>
           <p class="text-white lg:mb-24">
@@ -524,41 +553,32 @@
       </section>
 
       <section
+        data-aos="fade-right"
         class="relative flex flex-col overflow-hidden px-6 py-16 lg:grid lg:grid-cols-2 lg:justify-stretch lg:gap-x-36 lg:px-28 lg:py-40"
       >
         <div class="flex w-full items-start lg:col-span-1">
           <div class="size-full grow">
-            <div id="swiper-3" class="swiper size-full">
-              <div class="swiper-wrapper max-lg:aspect-square">
-                <div class="swiper-slide relative">
-                  <img
-                    src="./assets/商圈-西門町-彩虹.jpg"
-                    alt="商圈-西門町-彩虹"
-                    class="absolute inset-0 size-full object-cover"
-                  />
-                </div>
-                <div class="swiper-slide relative">
-                  <img
-                    src="./assets/商圈-西門町-HM.jpg"
-                    alt="商圈-西門町-HM"
-                    class="absolute inset-0 size-full object-cover"
-                  />
-                </div>
-                <div class="swiper-slide relative">
-                  <img
-                    src="./assets/商圈-西門町-萬年.jpg"
-                    alt="商圈-西門町-萬年"
-                    class="absolute inset-0 size-full object-cover"
-                  />
-                </div>
-                <div class="swiper-slide relative">
-                  <img
-                    src="./assets/商圈-西門町-泡泡.jpg"
-                    alt="商圈-西門町-泡泡"
-                    class="absolute inset-0 size-full object-cover"
-                  />
-                </div>
-              </div>
+            <div class="relative ml-10 flex h-full items-center">
+              <img
+                src="./assets/rainbow.jpg"
+                alt="西門町 彩虹走道"
+                class="slide slide-before-2 h-full object-cover max-lg:aspect-square"
+              />
+              <img
+                src="./assets/h-and-m.jpg"
+                alt="西門町 H&M"
+                class="slide slide-before-1 h-full object-cover max-lg:aspect-square"
+              />
+              <img
+                src="./assets/wan-nian-building.jpg"
+                alt="西門町 萬年大樓"
+                class="slide slide-in-view h-full object-cover max-lg:aspect-square"
+              />
+              <img
+                src="./assets/pop-mart.jpg"
+                alt="西門町 泡泡瑪特"
+                class="slide h-full object-cover max-lg:aspect-square"
+              />
             </div>
             <div
               class="text-main mt-2 flex w-full items-center gap-4 text-lg font-medium after:grow after:border-b-2 after:border-[var(--main)] after:content-['']"
@@ -630,6 +650,7 @@
       </section>
 
       <section
+        data-aos="fade-up"
         class="prose-lg bg-[url('./assets/bg-img.jpg')] bg-cover bg-no-repeat py-24 lg:py-40"
       >
         <div class="flex flex-col items-center">
@@ -859,18 +880,55 @@
         swiper2.slideNext();
       });
 
-      const swiper3 = new Swiper("#swiper-3", {
-        loop: true,
-        slidesPerView: 3,
-        spaceBetween: -30,
+      const slidesImgArr = $(".slide");
+      let slideIdxArr = [0, 1, 2]; // before-2, before-1, in-view
+
+      function getNextSlideIdxArr() {
+        return slideIdxArr.map((idx) =>
+          idx + 1 >= slidesImgArr.length ? 0 : idx + 1,
+        );
+      }
+
+      function getPrevSlideIdxArr() {
+        return slideIdxArr.map((idx) =>
+          idx - 1 < 0 ? slidesImgArr.length - 1 : idx - 1,
+        );
+      }
+
+      $("#swiper-3-next").click(() => {
+        slidesImgArr.removeClass("slide-in-view slide-before-1 slide-before-2");
+
+        const [prev2, prev1, current] = getNextSlideIdxArr();
+
+        slidesImgArr.each((idx, el) => {
+          if (idx === prev2) {
+            $(el).addClass("slide-before-2");
+          } else if (idx === prev1) {
+            $(el).addClass("slide-before-1");
+          } else if (idx === current) {
+            $(el).addClass("slide-in-view");
+          }
+        });
+
+        slideIdxArr = [prev2, prev1, current];
       });
 
       $("#swiper-3-prev").click(() => {
-        swiper3.slidePrev();
-      });
+        slidesImgArr.removeClass("slide-in-view slide-before-1 slide-before-2");
 
-      $("#swiper-3-next").click(() => {
-        swiper3.slideNext();
+        const [prev2, prev1, current] = getPrevSlideIdxArr();
+
+        slidesImgArr.each((idx, el) => {
+          if (idx === prev2) {
+            $(el).addClass("slide-before-2");
+          } else if (idx === prev1) {
+            $(el).addClass("slide-before-1");
+          } else if (idx === current) {
+            $(el).addClass("slide-in-view");
+          }
+        });
+
+        slideIdxArr = [prev2, prev1, current];
       });
 
       $(".mask").on("click", (el) => {
