@@ -594,8 +594,16 @@
 
       <section
         id="section-8"
-        class="relative min-h-dvh overflow-hidden bg-[url('./assets/building-bg.webp')] bg-cover bg-center bg-no-repeat px-6 py-16 lg:px-60 lg:pt-20"
+        class="relative min-h-dvh overflow-hidden bg-[url('./assets/building-bg.jpg')] bg-cover bg-center bg-no-repeat px-6 pb-16 pt-20 lg:px-60"
       >
+        <img
+          data-aos="fade-up"
+          data-aos-anchor="#section-8"
+          data-aos-delay="500"
+          class="absolute bottom-0 right-0 object-cover max-lg:hidden"
+          src="./assets/building.png"
+          alt="瓏山林玥河"
+        />
         <div class="prose-lg lg:max-w-[50%]">
           <img
             data-aos="fade-up"
@@ -761,7 +769,7 @@
               data-aos="fade-left"
               data-aos-anchor="#section-9"
               data-aos-delay="500"
-              class="absolute -bottom-20 right-[-30%] z-[2] size-48 rounded-full bg-[url('./assets/bg-img.webp')] bg-cover bg-center max-lg:hidden"
+              class="absolute -bottom-20 right-[-10rem] z-[2] size-48 rounded-full bg-[url('./assets/bg-img.webp')] bg-cover bg-center max-lg:hidden"
             ></div>
           </div>
         </div>
@@ -1160,7 +1168,7 @@
 
       // 绑定滚动事件
       $(window).on("scroll", () => {
-        if (window.innerWidth < 1024) {
+        if (window.innerWidth < 992) {
           toggleFooterVisibility();
         }
       });
