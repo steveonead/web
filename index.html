@@ -648,6 +648,7 @@
           data-aos-anchor="#section-9"
           class="flex w-full items-start max-lg:flex-wrap lg:col-span-1"
         >
+          <!-- TODO: 圖片文字敘述 -->
           <div class="size-full grow 2xl:ml-32">
             <div
               class="relative flex h-full items-center max-lg:aspect-square 2xl:aspect-[6/7]"
@@ -1112,7 +1113,7 @@
       $("#swiper-3-next").click(() => customSwiperNavigation("next"));
       $("#swiper-3-prev").click(() => customSwiperNavigation("prev"));
 
-      $(".mask").on("click", (el) => {
+      $(".mask").on("touchmove", (el) => {
         $(el.currentTarget).fadeOut();
       });
 
