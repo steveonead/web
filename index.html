@@ -87,25 +87,43 @@
         animation-iteration-count: infinite;
       }
 
-      @keyframes fade-lr {
-        0% {
-          transform: translateX(-10px);
-        }
+      #section-2 {
+        position: relative;
+        overflow: hidden;
+      }
 
-        25% {
-          transform: translateX(10px);
-        }
+      #section-2::before,
+      #section-2::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        z-index: -1;
+        animation: fadeSwitch 10s infinite;
+      }
 
-        50% {
-          transform: translateX(-10px);
-        }
+      #section-2::before {
+        background-image: url("./assets/s1-bg.webp");
+      }
 
-        75% {
-          transform: translateX(10px);
-        }
+      #section-2::after {
+        background-image: url("./assets/s1-bg-2.webp");
+        animation-delay: 5s;
+      }
 
+      @keyframes fadeSwitch {
+        0%,
+        45% {
+          opacity: 1;
+        }
+        50%,
+        95% {
+          opacity: 0;
+        }
         100% {
-          transform: translateX(-10px);
+          opacity: 1;
         }
       }
 
@@ -189,10 +207,11 @@
             data-aos="fade"
             data-aos-delay="600"
             data-aos-anchor="#section-1"
-            class="mt-12 w-full text-center font-medium tracking-[1.5rem] text-white max-lg:leading-relaxed lg:mt-10"
+            class="mt-12 w-full text-center font-medium text-white max-lg:leading-relaxed lg:mt-10"
           >
-            西門雙星 <br class="lg:hidden" />
-            靜巷藝邸
+            <span class="tracking-[1em]">西門雙星</span>
+            <br class="lg:hidden" />
+            <span class="tracking-[1em]">靜巷藝邸</span>
           </h2>
           <h2
             data-aos="fade"
@@ -200,8 +219,8 @@
             data-aos-anchor="#section-1"
             class="w-full space-x-3 text-center font-medium text-white"
           >
-            <span class="tracking-wider">35-50坪</span>
-            <span class="tracking-wider">2389-1888</span>
+            <span class="tracking-widest">35-50坪</span>
+            <span class="tracking-widest">2389-1888</span>
           </h2>
         </div>
         <div class="max-lg:hidden">
@@ -240,13 +259,13 @@
 
       <section
         id="section-2"
-        class="min-h-[120dvh] bg-[url('./assets/s1-bg.webp')] bg-cover bg-bottom bg-no-repeat px-6 py-16 lg:min-h-dvh lg:p-20"
+        class="min-h-[120dvh] bg-cover bg-bottom bg-no-repeat px-6 py-10 lg:min-h-dvh lg:px-20 lg:py-2"
       >
-        <div class="prose-lg flex flex-col items-end">
+        <div class="prose-lg flex flex-col">
           <img
             data-aos="fade-left"
             data-aos-anchor="#section-2"
-            class="lg:max-w-[500px]"
+            class="-ml-10 lg:max-w-[500px]"
             src="./assets/svg/s1-text-en.svg"
             alt="STANDING PROUDLY IN WEST TAIPEI"
           />
@@ -254,7 +273,7 @@
             data-aos="fade-left"
             data-aos-delay="300"
             data-aos-anchor="#section-2"
-            class="text-end text-2xl leading-relaxed text-white max-lg:!mt-2"
+            class="-mt-12 text-2xl leading-relaxed text-white"
           >
             揭序百年西區 <br />
             世界之窗中的富隱名邸
