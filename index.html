@@ -408,7 +408,7 @@
 
       <section id="section-6" class="relative flex flex-col px-6 py-16 lg:p-32">
         <div
-          class="prose-lg mb-10 flex flex-col lg:flex-row lg:items-end lg:gap-40"
+          class="prose-lg mb-6 flex flex-col lg:mb-2 lg:flex-row lg:items-end lg:gap-40"
         >
           <img
             data-aos="fade-right"
@@ -426,13 +426,61 @@
             <p class="mb-0">
               板南×松山線交會「西門站」每日近8.4萬人潮進出站，長期穩居北捷前2大站，與台北車站共築北市最龐大交通樞紐！【瓏山林玥河】近鄰西門站，直達南軟與信義區，5站內集聚中山、忠孝新生、東區、三重站，稱霸軌道經濟學！
             </p>
+            <div class="text-main mt-4 flex items-center gap-2">
+              <button id="swiper-4-prev">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1"
+                    d="M20 12H4m0 0l6-6m-6 6l6 6"
+                  />
+                </svg>
+              </button>
+              <div class="border-main h-4 border-l"></div>
+              <button id="swiper-4-next">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1"
+                    d="M4 12h16m0 0l-6-6m6 6l-6 6"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
-        <div
-          data-aos="fade-up"
-          data-aos-anchor="#section-6"
-          class="aspect-[5/4] bg-[url('./assets/s5-img.webp')] bg-cover bg-[50%_80%] lg:mt-4 lg:aspect-[5/2]"
-        ></div>
+        <div id="swiper-4" class="swiper size-full">
+          <div class="swiper-wrapper">
+            <div
+              class="swiper-slide aspect-[5/4] bg-[url('./assets/s5-img.webp')] bg-cover bg-[50%_80%] lg:mt-4 lg:aspect-[5/2]"
+            ></div>
+            <div
+              class="swiper-slide aspect-[5/4] bg-[url('./assets/s5-img-2.webp')] bg-cover bg-bottom lg:mt-4 lg:aspect-[5/2]"
+            ></div>
+            <div
+              class="swiper-slide aspect-[5/4] bg-[url('./assets/s5-img-3.webp')] bg-cover bg-bottom lg:mt-4 lg:aspect-[5/2]"
+            ></div>
+            <div
+              class="swiper-slide aspect-[5/4] bg-[url('./assets/s5-img-4.webp')] bg-cover bg-bottom lg:mt-4 lg:aspect-[5/2]"
+            ></div>
+          </div>
+        </div>
         <div
           data-aos="fade-right"
           data-aos-anchor="#section-6"
@@ -548,8 +596,8 @@
             <div class="swiper-wrapper aspect-square">
               <div class="swiper-slide relative">
                 <img
-                  src="./assets/jins.webp"
-                  alt="西門町 Jins"
+                  src="./assets/red-building.webp"
+                  alt="西門町 紅樓"
                   class="absolute inset-0 size-full object-cover"
                 />
               </div>
@@ -564,13 +612,6 @@
                 <img
                   src="./assets/h-and-m.webp"
                   alt="西門町 H&M"
-                  class="absolute inset-0 size-full object-cover"
-                />
-              </div>
-              <div class="swiper-slide relative">
-                <img
-                  src="./assets/wan-nian-building.webp"
-                  alt="西門町 萬年大樓"
                   class="absolute inset-0 size-full object-cover"
                 />
               </div>
@@ -653,9 +694,9 @@
           class="max-lg:mt-6 lg:col-span-5 lg:mb-0 lg:pl-6"
         >
           <img
-            src="./assets/red-house.webp"
+            src="./assets/jins.webp"
             alt="西門紅樓實景"
-            class="aspect-square object-cover lg:aspect-[7/3]"
+            class="aspect-square object-cover object-bottom lg:aspect-[7/3]"
           />
         </div>
         <div
@@ -668,7 +709,7 @@
 
       <section
         id="section-9"
-        class="relative min-h-dvh overflow-hidden bg-[url('./assets/building-bg.jpg')] bg-cover bg-center bg-no-repeat px-6 pb-16 pt-20 lg:px-80 lg:py-28"
+        class="relative min-h-dvh overflow-hidden bg-[url('./assets/building-bg.jpg')] bg-cover bg-center bg-no-repeat px-6 pb-16 pt-20 lg:px-32 lg:py-28"
       >
         <img
           data-aos="fade-up"
@@ -679,12 +720,12 @@
           alt="瓏山林玥河"
         />
         <div
-          class="prose-lg relative z-10 max-lg:bg-black/25 max-lg:px-4 max-lg:py-12 lg:max-w-[40%]"
+          class="prose-lg relative z-10 max-lg:bg-black/25 max-lg:px-4 max-lg:py-12 lg:max-w-[60%]"
         >
           <img
             data-aos="fade"
             data-aos-anchor="#section-9"
-            class="lg:max-w-[280px]"
+            class="lg:max-w-[460px]"
             src="./assets/svg/s7-text-en.svg"
             alt="MANSION & MASTERPIECE"
           />
@@ -692,34 +733,50 @@
             data-aos="fade"
             data-aos-anchor="#section-9"
             data-aos-delay="300"
-            class="my-12 text-white"
+            class="absolute right-[-10%] top-[-6%] my-12 text-white"
           >
             新古典名宅 繁心一巷靜
           </h2>
-          <img
-            data-aos="fade"
-            data-aos-anchor="#section-9"
-            data-aos-delay="600"
-            class="mb-12 aspect-[5/3] object-cover lg:max-w-[400px]"
-            src="./assets/building-look-up.webp"
-            alt="外觀實景"
-          />
-          <h3
+          <div class="lg:flex lg:items-stretch lg:gap-x-10">
+            <img
+              data-aos="fade"
+              data-aos-anchor="#section-9"
+              data-aos-delay="600"
+              class="mb-12 aspect-[5/3] object-cover lg:my-0 lg:aspect-square lg:max-w-[300px]"
+              src="./assets/building-look-up.webp"
+              alt="外觀實景"
+            />
+            <div class="flex flex-col">
+              <div
+                data-aos="fade"
+                data-aos-anchor="#section-9"
+                data-aos-delay="900"
+                class="mb-auto w-full border-t border-white"
+              ></div>
+              <h3
+                data-aos="fade"
+                data-aos-anchor="#section-9"
+                data-aos-delay="900"
+                class="text-white"
+              >
+                西門特區靜巷名邸 雍雅大器落成
+              </h3>
+              <p
+                data-aos="fade"
+                data-aos-anchor="#section-9"
+                data-aos-delay="900"
+                class="text-white"
+              >
+                最有底蘊的老西區，最有未來的新座標，【瓏山林玥河】藏城市繁華於靜，享隱巷慢活哲學，目光高層相望河岸，地標層峰奢侈寧靜。在輝映台北雙星首席的西區，難得頂級規格的靜巷大戶名宅，才是真傳世價值。
+              </p>
+            </div>
+          </div>
+          <div
             data-aos="fade"
             data-aos-anchor="#section-9"
             data-aos-delay="900"
-            class="text-white"
-          >
-            西門特區靜巷名邸 雍雅大器落成
-          </h3>
-          <p
-            data-aos="fade"
-            data-aos-anchor="#section-9"
-            data-aos-delay="900"
-            class="text-white lg:mb-24"
-          >
-            最有底蘊的老西區，最有未來的新座標，【瓏山林玥河】藏城市繁華於靜，享隱巷慢活哲學，目光高層相望河岸，地標層峰奢侈寧靜。在輝映台北雙星首席的西區，難得頂級規格的靜巷大戶名宅，才是真傳世價值。
-          </p>
+            class="mb-auto mt-10 w-full border-t border-white"
+          ></div>
         </div>
       </section>
 
@@ -732,7 +789,6 @@
           data-aos-anchor="#section-10"
           class="flex w-full items-start max-lg:flex-wrap lg:col-span-1"
         >
-          <!-- TODO: 圖片文字敘述 -->
           <div class="size-full grow 2xl:ml-32">
             <div
               class="relative flex h-full items-center max-lg:aspect-square 2xl:aspect-[6/7]"
@@ -1158,6 +1214,19 @@
 
       $("#swiper-2-next").click(() => {
         swiper2.slideNext();
+      });
+
+      const swiper4 = new Swiper("#swiper-4", {
+        loop: true,
+        allowTouchMove: false,
+      });
+
+      $("#swiper-4-prev").click(() => {
+        swiper4.slidePrev();
+      });
+
+      $("#swiper-4-next").click(() => {
+        swiper4.slideNext();
       });
 
       const slidesImgArr = $(".slide");
