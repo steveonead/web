@@ -137,11 +137,14 @@
 
       #section-2::before {
         background-image: url("./assets/s1-bg.webp");
+        background-size: cover;
       }
 
       #section-2::after {
         background-image: url("./assets/s1-bg-2.webp");
+        background-size: cover;
         animation-delay: 5s;
+        background-position: 64% 0%;
       }
 
       @keyframes fadeSwitch {
@@ -288,10 +291,7 @@
         </div>
       </section>
 
-      <section
-        id="section-2"
-        class="min-h-[120dvh] bg-cover bg-bottom bg-no-repeat px-6 py-10 lg:min-h-dvh lg:px-20 lg:py-2"
-      >
+      <section id="section-2" class="min-h-dvh px-6 pt-[50%] lg:px-20 lg:py-2">
         <div class="prose-lg flex flex-col">
           <img
             data-aos="fade-left"
