@@ -709,40 +709,58 @@
 
       <section
         id="section-9"
-        class="relative min-h-dvh overflow-hidden bg-[url('./assets/building-bg.jpg')] bg-cover bg-center bg-no-repeat px-6 pb-16 pt-20 lg:px-32 lg:py-28"
+        class="relative min-h-dvh overflow-hidden bg-[url('./assets/building-bg.webp')] bg-cover bg-center bg-no-repeat px-6 pb-16 pt-20 lg:px-32 lg:py-28"
       >
         <img
           data-aos="fade-up"
           data-aos-anchor="#section-9"
           data-aos-delay="900"
-          class="absolute bottom-0 right-0 h-full object-cover"
-          src="./assets/building.png"
+          class="absolute bottom-0 right-[7%] max-w-[30%] object-contain xl:bottom-[-4%] xl:right-24 xl:max-w-[440px] 2xl:right-[7%] 2xl:max-w-[560px]"
+          src="./assets/building.webp"
           alt="瓏山林玥河"
         />
+        <img
+          data-aos="fade-up"
+          data-aos-anchor="#section-9"
+          data-aos-delay="1100"
+          src="./assets/front-wave.webp"
+          alt="front-wave"
+          class="absolute bottom-0 right-0"
+        />
+        <img
+          data-aos="fade-up"
+          data-aos-anchor="#section-9"
+          data-aos-delay="1500"
+          src="./assets/back-wave.webp"
+          alt="back-wave"
+          class="absolute bottom-0 right-0"
+        />
         <div
-          class="prose-lg relative z-10 max-lg:bg-black/25 max-lg:px-4 max-lg:py-12 lg:max-w-[60%]"
+          class="prose-lg relative z-10 max-lg:bg-black/25 max-lg:px-4 max-lg:py-12 xl:max-w-[48%]"
         >
-          <img
-            data-aos="fade"
-            data-aos-anchor="#section-9"
-            class="lg:max-w-[460px]"
-            src="./assets/svg/s7-text-en.svg"
-            alt="MANSION & MASTERPIECE"
-          />
-          <h2
-            data-aos="fade"
-            data-aos-anchor="#section-9"
-            data-aos-delay="300"
-            class="absolute right-[-10%] top-[-6%] my-12 text-white"
-          >
-            新古典名宅 繁心一巷靜
-          </h2>
+          <div class="relative">
+            <img
+              data-aos="fade"
+              data-aos-anchor="#section-9"
+              class="lg:!mb-20 lg:max-w-[400px]"
+              src="./assets/svg/s7-text-en.svg"
+              alt="MANSION & MASTERPIECE"
+            />
+            <h2
+              data-aos="fade"
+              data-aos-anchor="#section-9"
+              data-aos-delay="300"
+              class="absolute right-0 top-4 my-0 text-white"
+            >
+              新古典名宅 繁心一巷靜
+            </h2>
+          </div>
           <div class="lg:flex lg:items-stretch lg:gap-x-10">
             <img
               data-aos="fade"
               data-aos-anchor="#section-9"
               data-aos-delay="600"
-              class="mb-12 aspect-[5/3] object-cover lg:my-0 lg:aspect-square lg:max-w-[300px]"
+              class="mb-12 aspect-[5/3] object-cover lg:my-0 lg:aspect-square lg:max-w-[260px]"
               src="./assets/building-look-up.webp"
               alt="外觀實景"
             />
@@ -927,7 +945,7 @@
             基本資料
           </h2>
           <div
-            class="flex flex-wrap items-center justify-center gap-x-6 px-3 text-white lg:w-[75%] lg:px-0"
+            class="flex flex-wrap items-center justify-center gap-x-8 px-3 text-white lg:w-[75%] lg:px-0 xl:w-[65%] [&_p]:!my-3"
           >
             <p
               class="text-center text-[16px] before:text-[12px] before:content-['投資興建']"
@@ -1316,7 +1334,7 @@
 
       // 绑定滚动事件
       $(window).on("scroll", () => {
-        if (window.innerWidth < 992) {
+        if (window.innerWidth < 768) {
           toggleFooterVisibility();
         }
       });
