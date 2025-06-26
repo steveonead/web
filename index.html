@@ -57,6 +57,37 @@
         font-weight: 300;
       }
 
+      .img-with-caption {
+        position: relative;
+
+        &.caption-left::after {
+          content: attr(data-caption);
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          color: white;
+          padding: 0.5rem;
+          font-size: 12px;
+          z-index: 2;
+        }
+
+        &::after {
+          content: attr(data-caption);
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          color: white;
+          padding: 0.5rem;
+          font-size: 12px;
+          z-index: 2;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
       @media (min-width: 1204px) {
         .prose-lg p {
           font-weight: 100;
@@ -309,13 +340,18 @@
               </p>
             </div>
           </div>
-          <img
+          <div
+            class="img-with-caption col-span-1 aspect-square lg:order-first lg:!mb-0"
             data-aos="fade-right"
             data-aos-anchor="#section-3"
-            class="col-span-1 aspect-square object-cover lg:order-first lg:!mb-0"
-            src="./assets/s2-img.webp"
-            alt="台北車站實景"
-          />
+            data-caption="台北車站實景"
+          >
+            <img
+              class="object-cover"
+              src="./assets/s2-img.webp"
+              alt="台北車站實景"
+            />
+          </div>
         </div>
         <div
           data-aos="fade-left"
@@ -378,23 +414,29 @@
           </p>
           <div class="mt-10 flex items-stretch justify-center gap-2">
             <div class="flex flex-col gap-2">
-              <img
-                src="./assets/taipei-station.webp"
-                alt=""
-                class="m-0 size-full object-cover"
-              />
-              <img
-                src="./assets/ximen.webp"
-                alt=""
-                class="m-0 size-full object-cover"
-              />
+              <div class="img-with-caption" data-caption="台北車站實景">
+                <img
+                  src="./assets/taipei-station.webp"
+                  alt="台北車站實景"
+                  class="m-0 object-cover"
+                />
+              </div>
+              <div class="img-with-caption" data-caption="捷運西門站實景">
+                <img
+                  src="./assets/ximen.webp"
+                  alt="捷運西門站實景"
+                  class="m-0 object-cover"
+                />
+              </div>
             </div>
             <div>
-              <img
-                src="./assets/101.webp"
-                alt=""
-                class="m-0 size-full object-cover"
-              />
+              <div class="img-with-caption m-0" data-caption="台北101實景">
+                <img
+                  src="./assets/101.webp"
+                  alt="台北101實景"
+                  class="m-0 object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -468,16 +510,20 @@
         <div id="swiper-4" class="swiper size-full">
           <div class="swiper-wrapper">
             <div
-              class="swiper-slide aspect-[5/4] bg-[url('./assets/s5-img.webp')] bg-cover bg-[50%_80%] lg:mt-4 lg:aspect-[5/2]"
+              class="swiper-slide img-with-caption aspect-[5/4] bg-[url('./assets/s5-img.webp')] bg-cover bg-[50%_80%] lg:mt-4 lg:aspect-[5/2]"
+              data-caption="西門町實景 "
             ></div>
             <div
-              class="swiper-slide aspect-[5/4] bg-[url('./assets/s5-img-2.webp')] bg-cover bg-bottom lg:mt-4 lg:aspect-[5/2]"
+              class="swiper-slide img-with-caption aspect-[5/4] bg-[url('./assets/s5-img-2.webp')] bg-cover bg-bottom lg:mt-4 lg:aspect-[5/2]"
+              data-caption="西門町實景 "
             ></div>
             <div
-              class="swiper-slide aspect-[5/4] bg-[url('./assets/s5-img-3.webp')] bg-cover bg-bottom lg:mt-4 lg:aspect-[5/2]"
+              class="swiper-slide img-with-caption caption-left aspect-[5/4] bg-[url('./assets/s5-img-4.webp')] bg-cover bg-bottom lg:mt-4 lg:aspect-[5/2]"
+              data-caption="西門町實景 "
             ></div>
             <div
-              class="swiper-slide aspect-[5/4] bg-[url('./assets/s5-img-4.webp')] bg-cover bg-bottom lg:mt-4 lg:aspect-[5/2]"
+              class="swiper-slide img-with-caption aspect-[5/4] bg-[url('./assets/s5-img-3.webp')] bg-cover bg-bottom lg:mt-4 lg:aspect-[5/2]"
+              data-caption="西門町實景 "
             ></div>
           </div>
         </div>
@@ -492,7 +538,7 @@
         id="section-7"
         class="relative overflow-hidden px-6 pb-12 lg:px-32 lg:py-10"
       >
-        <div class="lg:grid lg:grid-cols-2 lg:gap-10">
+        <div class="lg:grid lg:grid-cols-2 lg:gap-40">
           <div
             data-aos="fade-right"
             data-aos-anchor="#section-7"
@@ -517,66 +563,57 @@
             data-aos-anchor="#section-7"
             class="col-span-1 max-lg:mt-12"
           >
+            <div class="text-main mb-4 flex items-center gap-2">
+              <button id="swiper-1-prev">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1"
+                    d="M20 12H4m0 0l6-6m-6 6l6 6"
+                  />
+                </svg>
+              </button>
+              <div class="border-main h-4 border-l"></div>
+              <button id="swiper-1-next">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1"
+                    d="M4 12h16m0 0l-6-6m6 6l-6 6"
+                  />
+                </svg>
+              </button>
+            </div>
             <div id="swiper-1" class="swiper size-full">
-              <div class="text-main mb-6 flex items-center gap-2">
-                <button id="swiper-1-prev">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1"
-                      d="M20 12H4m0 0l6-6m-6 6l6 6"
-                    />
-                  </svg>
-                </button>
-                <div class="border-main h-4 border-l"></div>
-                <button id="swiper-1-next">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1"
-                      d="M4 12h16m0 0l-6-6m6 6l-6 6"
-                    />
-                  </svg>
-                </button>
-              </div>
-              <div class="swiper-wrapper aspect-square lg:aspect-[8/9]">
-                <div class="swiper-slide relative">
-                  <img
-                    src="./assets/zhongxing-bridge.webp"
-                    alt="中興橋實景"
-                    class="absolute inset-0 size-full object-cover"
-                  />
-                </div>
-                <div class="swiper-slide relative">
-                  <img
-                    src="./assets/civic-blvd.webp"
-                    alt="市民大道實景"
-                    class="absolute inset-0 size-full object-cover"
-                  />
-                </div>
-                <div class="swiper-slide relative">
-                  <img
-                    src="./assets/expressway.webp"
-                    alt="環河快速道路實景"
-                    class="absolute inset-0 size-full object-cover"
-                  />
-                </div>
+              <div class="swiper-wrapper">
+                <div
+                  class="swiper-slide img-with-caption caption-left aspect-square bg-[url('./assets/zhongxing-bridge.webp')] bg-cover bg-center lg:aspect-[8/9]"
+                  data-caption="中興橋實景"
+                ></div>
+                <div
+                  class="swiper-slide img-with-caption caption-left aspect-square bg-[url('./assets/civic-blvd.webp')] bg-cover bg-center lg:aspect-[8/9]"
+                  data-caption="市民大道實景"
+                ></div>
+                <div
+                  class="swiper-slide img-with-caption caption-left aspect-square bg-[url('./assets/expressway.webp')] bg-cover bg-center lg:aspect-[8/9]"
+                  data-caption="環河快速道路實景"
+                ></div>
               </div>
             </div>
           </div>
@@ -590,38 +627,26 @@
         <div
           data-aos="fade-right"
           data-aos-anchor="#section-8"
-          class="lg:col-span-3 lg:pr-10"
+          class="lg:col-span-3 lg:pr-16"
         >
           <div id="swiper-2" class="swiper">
-            <div class="swiper-wrapper aspect-square">
-              <div class="swiper-slide relative">
-                <img
-                  src="./assets/red-building.webp"
-                  alt="西門町 紅樓"
-                  class="absolute inset-0 size-full object-cover"
-                />
-              </div>
-              <div class="swiper-slide relative">
-                <img
-                  src="./assets/rainbow.webp"
-                  alt="西門町 彩虹走道"
-                  class="absolute inset-0 size-full object-cover"
-                />
-              </div>
-              <div class="swiper-slide relative">
-                <img
-                  src="./assets/h-and-m.webp"
-                  alt="西門町 H&M"
-                  class="absolute inset-0 size-full object-cover"
-                />
-              </div>
-              <div class="swiper-slide relative">
-                <img
-                  src="./assets/pop-mart.webp"
-                  alt="西門町 泡泡瑪特"
-                  class="absolute inset-0 size-full object-cover"
-                />
-              </div>
+            <div class="swiper-wrapper">
+              <div
+                class="swiper-slide img-with-caption aspect-square bg-[url('./assets/red-building.webp')] bg-cover bg-center"
+                data-caption="西門町實景"
+              ></div>
+              <div
+                class="swiper-slide img-with-caption aspect-square bg-[url('./assets/rainbow.webp')] bg-cover bg-center"
+                data-caption="西門町實景"
+              ></div>
+              <div
+                class="swiper-slide img-with-caption aspect-square bg-[url('./assets/h-and-m.webp')] bg-cover bg-center"
+                data-caption="西門町實景"
+              ></div>
+              <div
+                class="swiper-slide img-with-caption aspect-square bg-[url('./assets/pop-mart.webp')] bg-cover bg-center"
+                data-caption="西門町實景"
+              ></div>
             </div>
           </div>
           <div class="text-main mt-4 flex items-center gap-2">
@@ -691,12 +716,13 @@
         <div
           data-aos="fade-left"
           data-aos-anchor="#section-8"
-          class="max-lg:mt-6 lg:col-span-5 lg:mb-0 lg:pl-6"
+          class="img-with-caption aspect-square max-lg:mt-6 lg:col-span-5 lg:mb-0 lg:aspect-[7/3] lg:pl-6"
+          data-caption="西門紅樓實景"
         >
           <img
             src="./assets/jins.webp"
             alt="西門紅樓實景"
-            class="aspect-square object-cover object-bottom lg:aspect-[7/3]"
+            class="object-cover object-bottom"
           />
         </div>
         <div
@@ -756,14 +782,19 @@
             </h2>
           </div>
           <div class="lg:flex lg:items-stretch lg:gap-x-10">
-            <img
+            <div
               data-aos="fade"
               data-aos-anchor="#section-9"
               data-aos-delay="600"
-              class="mb-12 aspect-[5/3] object-cover lg:my-0 lg:aspect-square lg:max-w-[260px]"
-              src="./assets/building-look-up.webp"
-              alt="外觀實景"
-            />
+              class="img-with-caption mb-12 aspect-[5/3] object-cover lg:my-0 lg:aspect-square lg:max-w-[260px]"
+              data-caption="外觀實景"
+            >
+              <img
+                class="m-0 object-cover"
+                src="./assets/building-look-up.webp"
+                alt="外觀實景"
+              />
+            </div>
             <div class="flex flex-col">
               <div
                 data-aos="fade"
